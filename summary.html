@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary</title>
+
+    <link rel="stylesheet" href="./css/summary.css">
+    <link rel="icon" type="image/x-icon" href="./asseds/img/Capa 1.png">
+    <script src="./mini_backend.js"></script>
+    <script src="./script.js"></script>
+    <script src="./template.js"></script>
+    <script src="./js/summary.js"></script>
+    <script src="./js/data_protection.js"></script>
+    <script src="./js/desktop_template.js"></script>
+
+    <link rel="stylesheet" href="./css/contacts.css">
+
+</head>
+
+<body onload="initSummary()">
+    <div class="content">
+        <div class="desktopMenu" w3-include-html="./asseds/templates/desktop_template.html"></div>
+        <div id="logOutBackground" class="logOutBackgroundSummary d-none" onclick="hideLogOutButtonSummary()"></div>
+        <div w3-include-html="./asseds/templates/mobileMenu.html"></div>
+
+
+        <div class="rightContent">
+
+            <div class="headerContent" id="headerContents"></div>
+
+            <div id="help" class="mainContainerHelpSummary d-none">
+                <div class="headerHelpSummary">
+                    <h1>Help</h1>
+                    <img onclick="goBacktoMainContainer()" src="./asseds/img/Vector.png">
+                </div>
+
+                <h2>What is Join?</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci doloribus eaque labore commodi ipsa rerum impedit, tempore, reiciendis dicta nostrum ducimus enim assumenda unde ab quos id, facilis possimus dolores.</p>
+
+                <h2>How to use it</h2>
+
+                <div class="flexContainer">
+                    <h3>1.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis fuga explicabo sequi totam, id, cum, quibusdam vero neque numquam nemo rerum laborum. Pariatur dolor odit eos consequuntur alias porro magni.</p>
+                </div>
+                <div class="flexContainer">
+                    <h3>2.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis fuga explicabo sequi totam, id, cum, quibusdam vero neque numquam nemo rerum laborum. Pariatur dolor odit eos consequuntur alias porro magni.</p>
+                </div>
+                <div class="flexContainer">
+                    <h3>3.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis fuga explicabo sequi totam, id, cum, quibusdam vero neque numquam nemo rerum laborum. Pariatur dolor odit eos consequuntur alias porro magni.</p>
+                </div>
+            </div>
+
+            <div id="legalNiticeSummery" class="legalNiticeSummery d-none">
+                <div class="headerHelpSummary">
+                    <h1>Legal Notice</h1>
+                    <img onclick="goBacktoMainContainer()" src="./asseds/img/Vector.png">
+                </div>
+
+                <h2>Bubtitle</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci doloribus eaque labore commodi ipsa rerum impedit, tempore, reiciendis dicta nostrum ducimus enim assumenda unde ab quos id, facilis possimus dolores.</p>
+
+                <h2>Subtitle</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci doloribus eaque labore commodi ipsa rerum impedit, tempore, reiciendis dicta nostrum ducimus enim assumenda unde ab quos id, facilis possimus dolores.</p>
+
+            </div>
+
+            <div id="dataProtection" w3-include-html="./asseds/templates/data_protection.html" class="dataProtection d-none"></div>
+
+
+            <div id="mainContainer">
+                <div class="mainContent">
+                    <div class="headline">
+                        <p class="kanban-mobile">Kanban Project Management Tool</p>
+                        <h1>Summary</h1>
+                        <p>Everything in a nutshell!</p>
+
+                    </div>
+                </div>
+                <div style="display:flex">
+                    <div class="left-Container">
+                        <div class="taskContainer">
+                            <a href="./board.html">
+                                <div class="boardContainer">
+                                    <div id="task-board"><b>5</b></div>
+                                    <p>Tasks in<br> Board</p>
+                                </div>
+                            </a>
+                            <a href="./board.html">
+                                <div class="boardContainer">
+                                    <div id="task-progress"><b>2</b></div>
+                                    <p>Tasks in <br>Progress</p>
+                                </div>
+                            </a>
+                            <a href="./board.html">
+                                <div class="boardContainer">
+                                    <div id="task-feedback"><b>2</b></div>
+                                    <p>Awaiting <br>Feedback</p>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="deadlineContainer">
+                            <a href="./board.html">
+                                <div class="deadlineTasks">
+                                    <img src="./asseds/img/Group 7.png">
+                                    <div class="deatlineUrgent">
+                                        <div id="task-urgent"><b>1</b></div>
+                                        <p>Urgent</p>
+                                    </div>
+
+                                    <div class="deatlineDate">
+                                        <p class="date" id="task-date"></p>
+                                        <p> Upcoming Deadline</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="finishTask">
+                            <a href="./board.html">
+                                <div onmouseover="onHoverLeft()" onmouseout="offHoverLeft()" class="finishContainer">
+                                    <img id="left-img" href="./board.html" src="./asseds/img/Frame 59.png">
+                                    <div>
+                                        <div id="task-todo"><b>1</b></div>
+                                        <p>To-do</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="./board.html">
+                                <div onmouseover="onHoverRight()" onmouseout="offHoverRight()" class="finishContainer">
+                                    <img id="right-img" href="./board.html" src="./asseds/img/Group 7 (1).png">
+                                    <div>
+                                        <div id="task-done"><b>1</b></div>
+                                        <p>Done</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="right-Container">
+                        <div id="greetTime" class="greet">
+                            <p>Good Morning</p><br>
+                            <p>Artur Marbach</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+}
+
+.content {
+    display: flex;
+}
+
+.header {
+    width: 232px;
+    height: 100vh;
+    background-color: #2A3647;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.headerImage {
+    width: 100px;
+    height: 121px;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex a {
+    padding: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #CDCDCD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 216px;
+}
+
+.flex img {
+    color: #FFFFFF;
+}
+
+.headerSummaryImage {
+    width: 22px;
+    height: 22px;
+    margin-right: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.headerSummaryText {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size: 16px;
+    font-weight: 400px;
+}
+
+.headerBoardImage {
+    width: 30px;
+    height: 30px;
+    margin-right: 23px;
+    margin-left: -30px;
+}
+
+.haderBoardText {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size: 16px;
+    font-weight: 400px;
+}
+
+.headerAddTaskImage {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    margin-left: -7px;
+}
+
+.headerAddTaskText {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size: 16px;
+    font-weight: 400px;
+}
+
+.headerContactsImage {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    margin-left: -13px;
+}
+
+.headerContactsText {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size: 16px;
+    font-weight: 400px;
+}
+
+.headerNoticeImage {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    margin-left: 17px;
+}
+
+.headerNoticeText {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size: 16px;
+    font-weight: 400px;
+}
+
+.headerDatenschutzImage {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    margin-left: 17px;
+}
+
+.headerDatenschutzText {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size: 16px;
+    font-weight: 400px;
+}

@@ -1,0 +1,1620 @@
+/* Right Container*/
+
+body {
+    margin: 0;
+}
+
+.rightContent {
+    height: 100vh;
+    width: 100vw;
+    background-color: #F5F5F5;
+    overflow: auto;
+}
+
+.rightContent::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+}
+
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 79px;
+    box-shadow: -1px 2px lightgrey;
+    position: relative;
+}
+
+.headerContent p {
+    padding: 20px;
+    font-size: 30px;
+}
+
+.personLogIn {
+    object-fit: cover;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+.headerContentRight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.information {
+    padding-right: 10px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.mainContent {
+    padding-left: 6%;
+    padding-right: 5%;
+    overflow: scroll;
+    height: 779px;
+}
+
+.mainContent::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+}
+
+
+/* scc for Board */
+
+.headerUnderRightMenuHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerUnderRightMenuHeaderHeadline {
+    font-weight: bold;
+    font-size: 61px;
+    color: #000000;
+}
+
+.headerUnderRightMenuHeaderBigDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerUnderRightMenuHeaderInputfield {
+    width: 185px;
+    height: 40px;
+    margin-right: 20px;
+    border: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #A8A8A8;
+    outline: none;
+}
+
+.headerUnderRightMenuHeaderButton {
+    height: 51px;
+    width: 150px;
+    background: #2A3647;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.headerUnderRightMenuHeaderButton:hover {
+    background-color: #29ABE2;
+    transition: 125ms;
+    transform: scale(1.01);
+    box-shadow: 0px 8px 15px -7px gray;
+}
+
+.headerUnderRightMenuHeaderButtonSmall {
+    height: 51px;
+    width: 51px;
+    border-radius: 10px;
+    background-color: #2A3647;
+    color: white;
+    font-size: 21px;
+    display: none;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 50px;
+}
+
+.headerUnderRightMenuHeaderButtonSmall:hover {
+    background-color: #29ABE2;
+    transition: 125ms;
+    transform: scale(1.01);
+    box-shadow: 0px 8px 15px -7px gray;
+    border: none;
+}
+
+.headerUnderMenuSmollDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addTaskImage {
+    padding-left: 15px;
+}
+
+.containerInputfield {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: #FFFFFF;
+    border: 1px solid #A8A8A8;
+    border-radius: 10px;
+    width: 251px;
+    height: 51px;
+    margin-right: 50px;
+    margin-left: 550px;
+}
+
+.containerInputfieldImage {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+}
+
+.searchImageDiv {
+    position: relative;
+}
+
+.containerTodoList {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.containerTodoListTodo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 230px;
+    margin-left: 10px;
+}
+
+.containerTodoListTodoTodo {
+    font-size: 21px;
+    font-weight: 700px;
+    cursor: pointer;
+}
+
+.containerTodoListProgress {
+    font-size: 21px;
+    font-weight: 700px;
+    cursor: pointer;
+}
+
+.containerTodoListFeedback {
+    font-size: 21px;
+    font-weight: 700px;
+    cursor: pointer;
+}
+
+.containerTodoListDone {
+    font-size: 21px;
+    font-weight: 700px;
+    cursor: pointer;
+}
+
+.containerTodo {
+    width: 250px;
+    min-height: 250px;
+    margin-top: 10px;
+}
+
+.containerBlock {
+    padding: 20px;
+    background-color: white;
+    word-wrap: break-word;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    height: fit-content;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.1);
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.plusButtonTodoList {
+    border-radius: 10px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-color: #2A3647;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plusButtonTodoList:hover {
+    color: #29ABE2;
+    border-color: #29ABE2;
+}
+
+.assignTask {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: -11px;
+}
+
+.assignTaskSelect {
+    display: flex;
+    justify-content: space-between;
+}
+
+.assignTaskSelectName {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 260px;
+    margin-left: 10px;
+}
+
+.assignedDiv1 {
+    width: 400px;
+    height: 7px;
+    border-radius: 10px;
+    padding: 18px;
+    border: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.assignTaskSelectImage {
+    margin-right: 0px;
+    margin-top: 16px;
+}
+
+.divAssignTask {
+    width: 35px;
+    height: 35px;
+    padding: 6px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+    color: white;
+}
+
+.nameContainer {
+    width: 35px;
+    height: 35px;
+    padding: 6px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+    color: white;
+    background-color: #7e7c7c;
+    margin-left: -11px;
+}
+
+.checkTasking {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+}
+
+.checkTaskSmall {
+    position: relative;
+    background-color: #FFFFFF;
+    width: 623px;
+    height: 90%;
+    border-radius: 30px;
+    overflow: scroll;
+    animation: slideInFromRight 0.5s forwards;
+}
+
+.checkTaskSmall::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+}
+
+
+/*Ab hier Help Container*/
+
+.mainContainerHelp {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
+    background-color: rgba(240, 236, 236, 0.443);
+    overflow: scroll;
+}
+
+.mainContainerHelp::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.headerHelp {
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerHelp h1 {
+    margin-top: 0;
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.headerHelp img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    opacity: 0.8;
+    margin-top: 24px;
+}
+
+.flexContainer {
+    display: flex;
+}
+
+.flexContainer p {
+    padding-left: 10px;
+    margin-top: 0;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.personLogIn {
+    object-fit: cover;
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    border: 3px solid #2A3647;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.logOutButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 2%;
+    width: 130px;
+    height: 53px;
+    background: #2A3647;
+    border-radius: 20px 0px 20px 20px;
+    color: #CDCDCD;
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#logOutButton:hover {
+    border-bottom: 2px solid white;
+    transition: all 225ms ease-in-out;
+}
+
+.helpBord {
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 225ms ease-in-out;
+}
+
+.helpBord:hover {
+    border-bottom: 2px solid white;
+    transition: all 225ms ease-in-out;
+}
+
+.legalNotice {
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 225ms ease-in-out;
+}
+
+.legalNotice:hover {
+    border-bottom: 2px solid white;
+    transition: all 225ms ease-in-out;
+}
+
+.dataProtectionBord {
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 225ms ease-in-out;
+}
+
+.dataProtectionBord:hover {
+    border-bottom: 2px solid white;
+    transition: all 225ms ease-in-out;
+}
+
+.LogOutBort {
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 225ms ease-in-out;
+}
+
+.LogOutBort:hover {
+    border-bottom: 2px solid white;
+    transition: all 225ms ease-in-out;
+}
+
+.bigLogOutButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 2%;
+    width: 130px;
+    height: 53px;
+    background: #2A3647;
+    border-radius: 20px 0px 20px 20px;
+    color: #CDCDCD;
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.logOutBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+}
+
+@keyframes slideInFromRight {
+    from {
+        right: -300px;
+    }
+    to {
+        right: 0;
+    }
+}
+
+.toEditTaskMainDiv {
+    position: relative;
+    background-color: #FFFFFF;
+    width: 623px;
+    height: 87vh;
+    border-radius: 30px;
+}
+
+.closes2 {
+    position: absolute;
+    top: 20px;
+    left: 570px;
+    color: #5f5e5e;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    font-family: none;
+}
+
+.closes2:hover,
+.closes2:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.openCheckTaskBigDiv {
+    margin: 60px;
+}
+
+.openCheckTasksCategory {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 142px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.openCheckTasksCategoryTesx {
+    font-size: 27px;
+    color: white;
+}
+
+.openCheckTasksTitle {
+    width: 523px;
+}
+
+.openCheckTasksTitleTest {
+    font-size: 61px;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+}
+
+.openCheckTasksDescription {
+    width: 523px;
+    font-size: 21px;
+}
+
+.openCheckTasksDescriptionText {
+    font-size: 21px;
+    word-wrap: break-word;
+}
+
+.openCheckTasksDateDiv {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.openCheckTasksDateText {
+    font-size: 21px;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+.openCheckTasksDateFormat {
+    font-size: 21px;
+}
+
+.openCheckTasksPrioDiv {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    position: relative;
+}
+
+.openCheckTasksPrioText {
+    font-size: 21px;
+    font-weight: bold;
+    color: #000000;
+    margin-right: 30px;
+}
+
+.openCheckTasksPrioTextDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 131px;
+    height: 33px;
+    border-radius: 10px;
+}
+
+.openCheckTasksPrioTextText {
+    font-size: 21px;
+    margin-right: 10px;
+}
+
+.openCheckTasksAssignedToSmallDiv {
+    display: flex;
+}
+
+.openCheckTasksAssignedToTitle {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.openCheckAssignTask {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.openCheckDivAssignTask {
+    width: 35px;
+    height: 35px;
+    padding: 6px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+    color: white;
+}
+
+.openCheckAssignTaskDivFullName {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.openCheckAssignTaskFullName {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 21px;
+    margin-left: 20px;
+    font-size: 21px;
+}
+
+.openCheckTasksAssignedToBoxFullName {
+    display: block;
+    margin-top: -5px;
+}
+
+.toEditopenCheckTaskBigDiv {
+    margin-top: 30px;
+    margin-left: 90px;
+    margin-right: 76px;
+}
+
+.toEditTaskButton {
+    width: 57px;
+    height: 57px;
+    background: #2A3647;
+    border-radius: 10px;
+    margin-top: -57px;
+    margin-left: 480px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toEditTaskButton:hover {
+    background-color: #29ABE2;
+}
+
+.toEditTaskTitelInput {
+    width: 432px;
+    height: 35px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.toEditTaskTitleDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.toEditTaskDescriptionInput {
+    width: 432px;
+    height: 70px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.toEditTaskSaveButton {
+    width: 75px;
+    height: 57px;
+    background: #2A3647;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 665px;
+    left: 510px;
+    cursor: pointer;
+}
+
+.toEditTaskSaveButton:hover {
+    background-color: #29ABE2;
+}
+
+.deleteTaskButton {
+    width: 57px;
+    height: 57px;
+    background: #2A3647;
+    border-radius: 10px;
+    margin-top: 0px;
+    margin-left: 400px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.deleteTaskButton:hover {
+    background-color: #29ABE2;
+}
+
+.deleteTaskImage {
+    width: 30px;
+    height: 30px;
+}
+
+.toEditTaskButtonText {
+    color: white;
+    font-size: 19px;
+    margin-right: 10px;
+}
+
+.assignedToListToEdit {
+    margin-top: 0px;
+    border: 1px solid lightgray;
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-left: 0px;
+    list-style-type: none;
+    height: 133px;
+    width: 435px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.assignedContactsSelectToEdit {
+    font-size: 21px;
+}
+
+.assignedAddContactToEdit {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.openCheckboxSubtasks {
+    max-width: 25px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.openSubtasksComent {
+    padding-left: 15px;
+    font-size: 21px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.progressContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.progressBarBig {
+    width: 80px !important;
+    height: 8px;
+    background-color: #f4f4f4;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progressBar {
+    height: 100%;
+    background-color: #29ABE2;
+    border-radius: 2px;
+}
+
+.progressText {
+    white-space: nowrap;
+}
+
+.askDeleteTask {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.deleteTaskTesx {
+    font-size: 21px;
+}
+
+.deleteTaskAnswer {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #2A3647;
+    color: white;
+    font-size: 21px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.bigDivDeleteTask {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+}
+
+
+/* Area for render Tasks */
+
+.containerBlock {
+    padding: 20px;
+    background-color: white;
+    word-wrap: break-word;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    height: fit-content;
+    cursor: pointer;
+}
+
+.popupToMoveTaskMobile {
+    z-index: 5;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 30px;
+}
+
+.popupToMoveTaskMobileSelections {
+    height: 280px;
+    width: 60%;
+    background-color: #ffffff;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0px 0px 14px 3px rgb(0 0 0 / 20%);
+    padding: 10px;
+}
+
+.popupToMoveTaskMobileSelections div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 25px;
+    padding-top: 20px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.popupToMoveTaskMobileSelections span {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, .05);
+    border-radius: 10px;
+    box-sizing: border-box;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dragAreaHighlight {
+    border: 1px dashed rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+}
+
+.headerUnderMenuSmollDivDiv {
+    display: none;
+}
+
+.headerUnderRightMenuHeaderDiv {
+    display: contents;
+}
+
+.closes4 {
+    position: absolute;
+    top: 26px;
+    left: 533px;
+    display: none;
+    cursor: pointer;
+}
+
+.selectionMessage {
+    padding: 30px;
+    width: 326px;
+    height: 74px;
+    background: #2A3647;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    position: fixed;
+    left: 37%;
+    top: 75%;
+    font-weight: 400;
+    font-size: 21px;
+    color: #FFFFFF;
+    animation: contactAnim 400ms normal forwards;
+    text-align: center;
+}
+
+.mobileMenuBig {
+    display: none;
+}
+
+.buttonSectionBackground {
+    background-color: #091931;
+}
+
+.miniTemplate {
+    width: 100%;
+    height: 80px;
+    background-color: #2A3647;
+    position: fixed;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.miniTemplate a {
+    text-decoration: none;
+}
+
+.buttonSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 20vw;
+    height: 60px;
+    gap: 10px;
+    color: #CDCDCD;
+}
+
+.buttonSection p {
+    margin: 0;
+}
+
+.headerImageLeft {
+    height: 40%;
+    display: none;
+}
+
+.mainContainerHelpBord {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
+    background-color: #F5F5F5;
+    overflow: scroll;
+    height: 652px;
+}
+
+.mainContainerHelpBord::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+}
+
+.headerHelpBord img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-top: 31px;
+}
+
+.headerHelpBord {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media(max-width: 1500px) {
+    .containerInputfield {
+        margin-left: 450px;
+    }
+    .headerContent p {
+        padding: 20px;
+        font-size: 30px;
+    }
+}
+
+@media(max-width: 1450px) {
+    .containerInputfield {
+        margin-left: 380px;
+    }
+}
+
+@media(max-width: 1370px) {
+    .containerInputfield {
+        margin-left: 320px;
+    }
+    .containerTodoList {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+@media(max-height: 1368px) {
+    .mainContent {
+        height: 1091px !important;
+        margin-top: 2px;
+    }
+}
+
+@media(max-width: 1310px) {
+    .containerInputfield {
+        margin-left: 300px;
+    }
+}
+
+@media(max-width: 1270px) {
+    .containerTodoList {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .containerInputfield {
+        margin-left: 250px;
+    }
+}
+
+@media(max-width: 1215px) {
+    .containerTodoList {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .containerInputfield {
+        margin-left: 200px;
+    }
+}
+
+@media(max-width: 1160px) {
+    .containerTodoList {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .containerInputfield {
+        margin-left: 150px;
+    }
+}
+
+@media(max-width: 1105px) {
+    .containerTodoList {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .containerInputfield {
+        margin-left: 100px;
+    }
+}
+
+@media(max-width: 1050px) {
+    .containerInputfield {
+        margin-left: 50px;
+    }
+}
+
+@media(max-height: 1024px) {
+    .mainContent {
+        height: 840px !important;
+    }
+}
+
+@media(max-width: 1024px) {
+    .headerHelp h1 {
+        margin-top: 0;
+        font-size: 40px;
+    }
+    .mainContainerHelp {
+        padding-left: 50px;
+        padding-right: 50px;
+        height: 463px;
+    }
+}
+
+@media(max-width: 980px) {
+    .containerInputfield {
+        margin-left: 20px;
+    }
+    .containerTodoListTodo {
+        width: 85vw;
+    }
+    .containerBlock {
+        width: 83vw;
+    }
+    .progressBarBig {
+        width: 68vw !important;
+    }
+    .headerUnderRightMenuHeader {
+        display: unset;
+    }
+    .headerUnderRightMenuHeaderButtonSmall {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0px;
+    }
+    .headerUnderRightMenuHeaderButton {
+        display: none;
+    }
+    .containerInputfield {
+        margin-left: 0px;
+    }
+    .rightTemplates {
+        display: none;
+    }
+    .containerTodo {
+        margin-left: -10px;
+        width: 93vw;
+        min-height: 200px;
+    }
+    .headerContent p {
+        display: none;
+    }
+    .information {
+        display: none;
+    }
+    .headerContent1 {
+        font-size: 16px;
+        background-color: #F5F5F5;
+    }
+    .headerContent {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: -1px 2px lightgray;
+    }
+    .headerUnderMenuSmollDivDiv {
+        display: flex;
+        margin-top: 30px;
+    }
+    .headerUnderMenuSmollDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+    .headerUnderRightMenuHeaderDiv {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 98%;
+    }
+    .headerUnderRightMenuHeaderHeadline {
+        font-size: 47px;
+        margin-top: 42px;
+    }
+    .headerUnderRightMenuHeaderButtonSmall {
+        height: 40px;
+        width: 40px;
+    }
+    .checkTasking {
+        background-color: #F5F5F5;
+        width: auto;
+        height: 792px;
+        top: 81px;
+        display: block;
+    }
+    .checkTaskSmall {
+        background-color: #F5F5F5 !important;
+        width: auto;
+        height: 90vh;
+        border-radius: 30px;
+        position: relative;
+    }
+    .openCheckTaskBigDiv {
+        margin-top: 60px;
+        margin-right: 60px;
+        margin-left: 30px;
+    }
+    .deleteTaskButton {
+        margin-left: 73%;
+        margin-top: 15px;
+    }
+    .toEditTaskButton {
+        margin-left: 84%;
+    }
+    .toEditTaskMainDiv {
+        background-color: #F5F5F5 !important;
+        width: auto;
+        height: 90vh;
+        border-radius: 30px;
+        position: relative;
+    }
+    .toEditopenCheckTaskBigDiv {
+        margin-top: 30px;
+        margin-left: 42px;
+        margin-right: 35px;
+    }
+    .toEditTaskTitelInput {
+        width: 93%;
+    }
+    .toEditTaskDescriptionInput {
+        width: 93%;
+    }
+    .assignedDiv1 {
+        width: 88%;
+        height: 7px;
+        font-size: 16px;
+        background-color: white;
+    }
+    .assignedContactsSelectToEdit {
+        font-size: 16px;
+    }
+    .toEditTaskSaveButton {
+        top: 81%;
+        left: 74%;
+    }
+    .assignedToListToEdit {
+        background-color: white;
+        height: 133px;
+        width: 93.5%;
+    }
+    .closes2 {
+        display: none;
+    }
+    .closes4 {
+        top: 12%;
+        left: 94%;
+        display: flex;
+    }
+    .miniTemplate {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .headerImageLeft {
+        height: 50%;
+        display: flex;
+        margin-left: 3%;
+    }
+    .bigLogOutButton {
+        height: 120px;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        padding-left: 10px;
+    }
+    #helpBord {
+        display: block !important;
+    }
+    #legalNotice {
+        display: block !important;
+    }
+    #dataProtectionLogOutButton {
+        display: block !important;
+    }
+    .mainContent {
+        height: 708px !important;
+    }
+}
+
+@media(max-width: 950px) {
+    .containerInputfield {
+        width: 200px;
+        margin-right: 30px;
+    }
+    .headerUnderRightMenuHeaderInputfield {
+        width: 136px;
+    }
+    .headerContent p {
+        text-align: center;
+    }
+}
+
+@media(max-height: 915px) {
+    .mainContent {
+        height: 747px !important;
+        margin-top: 3px;
+    }
+}
+
+@media(max-width: 912px) {
+    .mainContainerHelp {
+        padding-left: 40px;
+        padding-right: 40px;
+        height: 1239px;
+    }
+    .headerHelp img {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        opacity: 0.8;
+        margin-top: 18px;
+    }
+}
+
+@media(max-height: 896px) {
+    .mainContent {
+        height: 785px !important;
+    }
+}
+
+@media(max-width: 875px) {
+    .headerUnderRightMenuHeaderHeadline {
+        font-size: 55px;
+    }
+    .containerInputfield {
+        width: 150px;
+        margin-right: 30px;
+    }
+    .headerUnderRightMenuHeaderInputfield {
+        width: 88px;
+    }
+}
+
+@media(max-height: 851px) {
+    .mainContent {
+        height: 685px !important;
+        margin-top: 3px;
+    }
+}
+
+@media(max-height: 844px) {
+    .mainContent {
+        height: 680px !important;
+        margin-top: 3px;
+    }
+}
+
+@media(max-width: 820px) {
+    .mainContainerHelp {
+        padding-left: 40px;
+        padding-right: 40px;
+        height: 1052px;
+    }
+}
+
+@media(max-width: 768px) {
+    .mainContainerHelp {
+        padding-left: 40px;
+        padding-right: 40px;
+        height: 814px;
+    }
+}
+
+@media(max-height: 740px) {
+    .mainContent {
+        height: 575px !important;
+    }
+}
+
+@media(max-height: 720px) {
+    .mainContent {
+        height: 550px !important;
+    }
+}
+
+@media(max-height: 667px) {
+    .mainContent {
+        height: 502px !important;
+    }
+}
+
+@media(max-height: 653px) {
+    .mainContent {
+        height: 502px !important;
+    }
+}
+
+@media(max-height: 600px) {
+    .mainContent {
+        height: 509px !important;
+    }
+}
+
+@media(max-width: 570px) {
+    .deleteTaskButton {
+        margin-left: 74%;
+    }
+    .assignedDiv1 {
+        width: 84%;
+    }
+}
+
+@media(max-width: 540px) {
+    .mainContainerHelp {
+        padding-left: 40px;
+        padding-right: 40px;
+        height: 506px;
+    }
+    .checkTasking {
+        top: 81px;
+    }
+    .mainContainerHelpBord {
+        height: 579px;
+    }
+}
+
+@media(max-width: 530px) {
+    .deleteTaskButton {
+        margin-left: 73%;
+    }
+}
+
+@media(max-width: 471px) {
+    .headerContent p {
+        font-size: 20px;
+    }
+    .deleteTaskButton {
+        margin-left: 70%;
+    }
+}
+
+@media(max-width: 440px) {
+    .toEditTaskTitelInput {
+        width: 99%;
+    }
+}
+
+@media(max-width: 420px) {
+    .progressBarBig {
+        width: 58vw !important;
+    }
+    .deleteTaskButton {
+        margin-left: 69%;
+    }
+    .toEditTaskTitelInput {
+        width: 99%;
+    }
+}
+
+@media(max-width: 414px) {
+    .mainContainerHelp {
+        padding-left: 40px;
+        padding-right: 40px;
+        height: 681px;
+    }
+    .mainContainerHelpBord {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 10px;
+    }
+}
+
+@media(max-width: 412px) {
+    .headerHelp h1 {
+        margin-top: 0;
+        font-size: 40px;
+    }
+    .mainContainerHelp {
+        padding-left: 30px;
+        padding-right: 30px;
+        height: 700px;
+    }
+}
+
+@media(max-width: 393px) {
+    .mainContainerHelp {
+        padding-left: 40px;
+        padding-right: 40px;
+        height: 636px;
+    }
+}
+
+@media(max-width: 392px) {
+    .headerContent p {
+        font-size: 17px;
+        padding-left: 67px;
+    }
+    .openCheckTaskBigDiv {
+        margin-left: 15px;
+    }
+    .deleteTaskButton {
+        margin-left: 68%;
+    }
+}
+
+@media(max-width: 375px) {
+    .mainContainerHelp {
+        padding-left: 40px;
+        padding-right: 40px;
+        height: 456px;
+    }
+    .mainContainerHelpBord {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 10px;
+    }
+}
+
+@media(max-width: 360px) {
+    .deleteTaskButton {
+        margin-left: 66%;
+    }
+    .mainContainerHelp {
+        padding-left: 30px;
+        padding-right: 30px;
+        height: 527px;
+    }
+}
+
+@media(max-width: 334px) {
+    .headerContent p {
+        font-size: 17px;
+        padding-left: 50px;
+    }
+    .deleteTaskButton {
+        margin-left: 63%;
+    }
+}
+
+@media(max-width: 280px) {
+    .headerHelp h1 {
+        margin-top: 0;
+        font-size: 40px;
+    }
+    .mainContainerHelp {
+        padding-left: 30px;
+        padding-right: 30px;
+        height: 444px;
+    }
+    .headerHelp {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    .mainContainerHelpBord {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 0px;
+        background-color: #F5F5F5;
+        overflow: scroll;
+        height: 478px;
+    }
+}

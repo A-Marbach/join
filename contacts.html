@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./template.js"></script>
+    <script src="./script.js"></script>
+    <script src="./js/sign_up.js"></script>
+    <script src="./js/logIn.js"></script>
+    <script src="./js/contacts.js"></script>
+    <script src="./mini_backend.js"></script>
+    <link rel="stylesheet" href="./css/contacts.css">
+    <link rel="icon" type="image/x-icon" href="./asseds/img/Capa 1.png">
+</head>
+
+<body onload="contactInit(); includeHTML();">
+    <div id="logOutBackground" class="logOutBackground d-none" onclick="hideLogOutButton()"></div>
+    <div class="content">
+        <div class="desktopMenu" w3-include-html="./asseds/templates/desktop_template.html"></div>
+        <div w3-include-html="./asseds/templates/mobileMenu.html"></div>
+
+
+        <div class="rightContent">
+            <div id="headerContent"></div>
+            <div id="newContact" class="new-contact-mobile-box">
+                <div onclick="showContactBox()" class="new-contact-mobile d-none">
+                    <p class="new-contact-btn">New Contact</p>
+                    <img src="./asseds/img/new_contact.png">
+                </div>
+            </div>
+
+            <div class="mainContent">
+
+                <div id="contactList" class="contactList"></div>
+
+                <div id="helpContacts" class="mainContainerHelp d-none">
+                    <div class="headerHelp">
+                        <h1>Help</h1>
+                        <img onclick="goBacktoMainContainers()" src="./asseds/img/Vector.png">
+                    </div>
+
+                    <h2>What is Join?</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci doloribus eaque labore commodi ipsa rerum impedit, tempore, reiciendis dicta nostrum ducimus enim assumenda unde ab quos id, facilis possimus dolores.</p>
+
+                    <h2>How to use it</h2>
+
+                    <div class="flexContainer">
+                        <h3>1.</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis fuga explicabo sequi totam, id, cum, quibusdam vero neque numquam nemo rerum laborum. Pariatur dolor odit eos consequuntur alias porro magni.</p>
+                    </div>
+                    <div class="flexContainer">
+                        <h3>2.</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis fuga explicabo sequi totam, id, cum, quibusdam vero neque numquam nemo rerum laborum. Pariatur dolor odit eos consequuntur alias porro magni.</p>
+                    </div>
+                    <div class="flexContainer">
+                        <h3>3.</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis fuga explicabo sequi totam, id, cum, quibusdam vero neque numquam nemo rerum laborum. Pariatur dolor odit eos consequuntur alias porro magni.</p>
+                    </div>
+                </div>
+
+                <div id="legalNiticeContact" class="mainContainerHelp d-none">
+                    <div class="headerHelpNotice">
+                        <h1>Legal Notice</h1>
+                        <img onclick="goBacktoMainContainers()" src="./asseds/img/Vector.png">
+                    </div>
+
+                    <h2>Bubtitle</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci doloribus eaque labore commodi ipsa rerum impedit, tempore, reiciendis dicta nostrum ducimus enim assumenda unde ab quos id, facilis possimus dolores.</p>
+
+                    <h2>Subtitle</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci doloribus eaque labore commodi ipsa rerum impedit, tempore, reiciendis dicta nostrum ducimus enim assumenda unde ab quos id, facilis possimus dolores.</p>
+
+                </div>
+
+                <div id="dataProtection" w3-include-html="./asseds/templates/data_protection.html" class="dataProtection d-none"></div>
+
+
+                <div class="rightSection" id="rightSection">
+                    <div class="rightArea">
+                        <div class="showContactHeader">
+                            <p class="mobileHeader">Kanban Project Management Tool</p>
+                            <h1 class="showContactHeaderH1">Contacts</h1>
+                            <img onclick="closeMobileContactInfo()" class="closeArrow d-none" src="./asseds/img/closeArrowBlack.png">
+                            <div class="line"></div>
+                            <p>Better with a team</p>
+                        </div>
+
+                        <div id="bigContactSection"></div>
+                    </div>
+
+
+                    <div onclick="showContactBox()" class="new-contact">
+                        <p class="new-contact-btn">New Contact</p>
+                        <img src="./asseds/img/new_contact.png">
+                    </div>
+                </div>
+
+                <div id="editContactBoxBckgr" style="display: none;" class="newContactBoxBckgr"></div>
+
+                <div id="newContactBoxBckgr" style="display: none;" class="newContactBoxBckgr">
+                    <div id="newContactBox" class="newContactBox">
+                        <img onclick="closeContactBox()" class="closeImg" src="./asseds/img/cross.png">
+                        <img onclick="closeContactBox()" class="closeImgMobile d-none" src="./asseds/img/closewhite.png">
+                        <div class="leftContent">
+                            <img src="./asseds/img/littleLogo.png">
+                            <h1>Add Contact</h1>
+                            <p>Tasks are better with a team</p>
+                            <div class="newContactBoxLine"></div>
+                        </div>
+
+                        <div class="contactRightContent">
+                            <div class="contactRightContentImg">
+                                <img src="asseds/img/personLogo.png">
+                            </div>
+                            <form onsubmit="addContact(); return false;" class="inputFieldSection">
+                                <div class="inputField">
+                                    <input required id="input1" type="name" placeholder="Name">
+                                </div>
+                                <div class="inputField">
+                                    <input required id="input2" type="email" placeholder="Email">
+                                </div>
+                                <div class="inputField">
+                                    <input required id="input3" type="number" placeholder="Phone">
+                                </div>
+
+
+                                <div class="buttons">
+                                    <div class="log-in-guest" onclick="closeContactBox()">
+                                        <p>Cancel</p>
+                                    </div>
+                                    <button class="log-in-btn">
+                                        <p class="buttonImg">Create Contact</p>
+                                    </button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="contactCreated" style="display: none;" class="conctactCreatedDiv">
+                    <div class="contactCreated">
+                        <p>Contact succesfully created</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,475 @@
+body {
+    margin: 0;
+    background-color: #F6F7F8;
+    overflow: hidden;
+}
+
+.d-none {
+    display: none;
+}
+
+:root {
+    font-family: 'Inter', sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+    :root {
+        font-family: 'Inter var', sans-serif;
+    }
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-Logo {
+    animation: myAnim 1s linear 200ms 1 normal both;
+    height: 10%;
+    z-index: 2;
+    position: absolute;
+}
+
+@keyframes myAnim {
+    0% {
+        transform: scale(3.5);
+        top: 40%;
+        left: 45%;
+    }
+
+    100% {
+        transform: scale(1);
+        top: 7%;
+        left: 5%;
+    }
+}
+
+
+.sign-Up-area {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 35px;
+    position: absolute;
+    width: 287px;
+    height: 51px;
+    right: 3%;
+    top: 7%;
+}
+
+.sign-Up-area p {
+    font-size: 20px;
+}
+
+.sign-Up-area button {
+    padding: 4px 16px;
+    gap: 10px;
+    width: 91px;
+    height: 51px;
+    background: #2A3647;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.sign-Up-area button:hover {
+    background-color: #29ABE2;
+    transition: 125ms;
+    transform: scale(1.01);
+    box-shadow: 0px 8px 15px -7px gray;
+}
+
+.log-In-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 0px;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+}
+
+.header {
+    width: 315px;
+    height: 73px;
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.header:before {
+    content: "";
+    border-bottom: 3px solid #29ABE2;
+    position: absolute;
+    left: 25%;
+    bottom: -24px;
+    height: 1px;
+    width: 50%;
+}
+
+.header h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.log-In-input {
+    margin-top: 11%;
+}
+
+.log-In-input input {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 13px 21px;
+    width: 422px;
+    height: 51px;
+    background: #FFFFFF;
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+}
+
+.inputField {
+    position: relative;
+}
+
+.inputFieldIMG {
+    position: absolute;
+    height: 20px;
+    width: 23px;
+    right: 5%;
+    top: 30%;
+}
+
+#input1 {
+    margin-bottom: 12%;
+}
+
+#wrongInput {
+    color: red;
+}
+
+#wrongInput p {
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-size: 11px;
+}
+
+#password-nonvisible {
+    cursor: pointer;
+}
+
+#password-visible {
+    cursor: pointer;
+}
+
+.remem-me {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 35px;
+    width: 335px;
+    height: 19px;
+    margin-top: 6%;
+}
+
+.remem-me p {
+    margin: 0;
+    font-size: 15px;
+}
+
+.remem-me a {
+    text-decoration: none;
+}
+
+.remember {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 20px;
+}
+
+.checkbox {
+    border: 1px solid #000000;
+    border-radius: 3px;
+    background: linear-gradient(180deg, #F9F9F9 0%, #F0F0F0 100%);
+}
+
+.forgot-pass {
+    color: #29ABE2;
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 35px;
+    width: 341px;
+    height: 51px;
+    margin-top: 5%;
+}
+
+.buttons a {
+    text-decoration: none;
+}
+
+.log-in-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 0px;
+    width: 145px;
+    height: 51px;
+    background: #2A3647;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 21px;
+}
+
+.log-in-btn:hover {
+    background-color: #29ABE2;
+    transition: 125ms;
+    transform: scale(1.01);
+    box-shadow: 0px 8px 15px -7px gray;
+}
+
+.log-in-guest {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 16px;
+    gap: 10px;
+    width: 161px;
+    height: 51px;
+    border: 1px solid #2A3647;
+    border-radius: 8px;
+    background-color: white;
+    color: #2A3647;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.log-in-guest:hover {
+    border-color: #29ABE2;
+    color: #29ABE2;
+    transition: 125ms;
+    transform: scale(1.01);
+    box-shadow: 0px 8px 15px -7px gray;
+}
+
+#myElem {
+    animation: cssAnimation 400ms 600ms forwards;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32rem;
+    position: relative;
+    top: 3%;
+}
+
+@keyframes cssAnimation {
+    0% {
+        opacity: 0.25;
+        visibility: visible;
+    }
+
+    25% {
+        opacity: 0.5;
+        visibility: visible;
+    }
+
+    50% {
+        opacity: 0.75;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .header {
+        width: 100%;
+    }
+
+    .header h1 {
+        font-size: 3rem;
+    }
+
+    .header:before {
+        width: 0px;
+        height: 88px;
+        border: 1px solid #29ABE2;
+        transform: rotate(90deg);
+        bottom: -60%;
+        left: 50%;
+    }
+
+    #myElem {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 2rem;
+        width: 90%;
+        margin-bottom: -10%;
+        top: unset;
+    }
+
+    .big-Logo {
+        opacity: 0;
+        animation: unset;
+        z-index: -4;
+    }
+
+    .mobile-background {
+        height: 100vh;
+        width: 100vw;
+        animation: mobileAnimation 600ms forwards;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    @keyframes mobileAnimation {
+        0% {
+            background-color: #2A3647;
+        }
+
+        25% {
+            background-color: #2A3647;
+        }
+
+        50% {
+            background-color: #2A3647;
+        }
+
+        75% {
+            background-color: #2A3647;
+        }
+
+        100% {
+            background-color: #F6F7F8;
+        }
+    }
+
+    .big-white-Logo {
+        opacity: 1;
+        animation: mobileLogoAnim 1s linear 200ms 1 normal both;
+        height: 11%;
+        width: 11%;
+        position: fixed;
+    }
+
+    @keyframes mobileLogoAnim {
+        0% {
+            transform: scale(3.5);
+            top: 40%;
+            left: 45%;
+            background-image: url('../asseds/img/bigWhiteLogo.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        50% {
+            background-image: url('../asseds/img/biglogo.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        100% {
+            background-image: url('../asseds/img/biglogo.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            transform: scale(1);
+            top: 3%;
+            left: 4%;
+        }
+    }
+
+    .sign-Up-area {
+        position: absolute;
+        top: 89%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 5%;
+    }
+
+    .log-In-area {
+        Width: 100%;
+        Height: 20%;
+        gap: 20px;
+    }
+
+    #input1 {
+        margin-bottom: 8%;
+    }
+
+    .log-In-input {
+        width: 90%;
+        margin-top: 0;
+    }
+
+    .log-In-input input {
+        width: 100%;
+        height: 41px;
+    }
+
+    .remem-me {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 14px;
+        width: 90%;
+
+    }
+
+    .buttons {
+        gap: 15px;
+        height: 24%;
+        margin-top: 0;
+        width: unset;
+    }
+
+    .log-in-btn {
+        width: 180px;
+        height: 51px;
+        padding: 4px 0px;
+        font-size: 16px;
+    }
+
+    .log-in-guest {
+        width: 180px;
+        height: 51px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .buttons {
+        flex-direction: column;
+    }
+}
