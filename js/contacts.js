@@ -1,7 +1,12 @@
 let letters = [];
-
+/**
+ * init function load all data from user - load header, contacts and all
+ * 
+ * 
+ */
 async function contactInit() {
     await downloadFromServer();
+    await includeHTML();
     users = JSON.parse(backend.getItem('users')) || [];
     letters = JSON.parse(backend.getItem('letters')) || [];
     activeUser = backend.getItem('activeUser') || 0;
@@ -11,9 +16,11 @@ async function contactInit() {
     renderContactList();
     navBarHighlight(4);
 }
-
-
-
+/**
+ * load first letters from user
+ * 
+ * 
+ */
 function loadLetters() {
     for (let i = 0; i < users[activeUser]['contacts'].length; i++) {
         let name = users[activeUser]['contacts'][i]['contactName'];
@@ -24,9 +31,11 @@ function loadLetters() {
         }
     }
 }
-
-
-//open the info container at help function
+/**
+ * open the info container at help function
+ * 
+ * 
+ */
 function help() {
     document.getElementById('helpContacts').classList.remove('d-none');
     document.getElementById('contactList').classList.add('d-none');
@@ -37,9 +46,11 @@ function help() {
     document.getElementById('dataProtection').classList.add('d-none');
 
 }
-
-
-//close the info container at help function
+/**
+ * close the info container at help function
+ * 
+ * 
+ */
 function goBacktoMainContainers() {
     document.getElementById('helpContacts').classList.add('d-none');
     document.getElementById('contactList').classList.remove('d-none');
@@ -47,9 +58,11 @@ function goBacktoMainContainers() {
     document.getElementById('legalNiticeContact').classList.add('d-none');
     document.getElementById('newContact').classList.remove('d-none');
 }
-
-
-//open the notice container
+/**
+ * open the notice container
+ * 
+ * 
+ */
 function notice() {
     document.getElementById('legalNiticeContact').classList.remove('d-none');
     document.getElementById('contactList').classList.add('d-none');
@@ -59,9 +72,11 @@ function notice() {
     document.getElementById('dataProtection').classList.add('d-none');
     document.getElementById('helpContacts').classList.add('d-none');
 }
-
-
-//open the data Protection information
+/**
+ * open the data Protection information
+ * 
+ * 
+ */
 function dataProtection() {
     document.getElementById('dataProtection').classList.remove('d-none');
     document.getElementById('contactList').classList.add('d-none');
@@ -71,27 +86,33 @@ function dataProtection() {
     document.getElementById('helpContacts').classList.add('d-none');
     document.getElementById('legalNiticeContact').classList.add('d-none');
 }
-
-
-//close the notice and data Pritection container
+/**
+ * close the notice and data Pritection container
+ * 
+ * 
+ */
 function goBack() {
     document.getElementById('dataProtection').classList.add('d-none');
     document.getElementById('contactList').classList.remove('d-none');
     document.getElementById('rightSection').classList.remove('d-none');
     document.getElementById('newContact').classList.remove('d-none');
 }
-
-
-//load activeuser 
+/**
+ * load activeuser 
+ * 
+ * 
+ */
 function loadHeader() {
     let header = document.getElementById('headerContent');
     let color = users[activeUser]['color'];
     let firstLetters = users[activeUser]['initials'];
     header.innerHTML += showHeader(color, firstLetters);
 }
-
-
-//render the letters
+/**
+ * render the letters
+ * 
+ * 
+ */
 function renderLetters() {
     let contact = document.getElementById('contactList');
     contact.innerHTML = '';
@@ -100,9 +121,11 @@ function renderLetters() {
         contact.innerHTML += contactLetterHeadline(firstLetter);
     }
 }
-
-
-//render the contactlist
+/**
+ * render the contactlist
+ * 
+ * 
+ */
 function renderContactList() {
     for (let i = 0; i < users[activeUser]['contacts'].length; i++) {
         let name = users[activeUser]['contacts'][i]['contactName'];
@@ -113,17 +136,21 @@ function renderContactList() {
         createBigSection(name, email, letter, color, firstLetter, i);
     }
 }
-
-
-// display the box to create a new contact
+/**
+ *  display the box to create a new contact
+ * 
+ * 
+ */
 function showContactBox() {
     document.getElementById('newContactBoxBckgr').style.display = 'block';
     document.getElementById('newContactBoxBckgr').style.display = 'flex';
     document.getElementById('newContactBox').classList.add('animation');
 }
-
-
-// Add names, emailAdress, phoneNumber into InputFields and create JSON
+/**
+ * Add names, emailAdress, phoneNumber into InputFields and create JSON
+ * 
+ * 
+ */
 async function addContact() {
     let color = getRandomColor();
     let contact = {
@@ -139,25 +166,32 @@ async function addContact() {
     saveUsersAndLetters(users, letters);
     lastStepsBeforeContactCreate();
 }
-
-
-//push the letter to array
+/**
+ * push the letter to array
+ * 
+ * 
+ * @param {string} firstLetter the first letter from from contact
+ */
 function pushLetterToArray(firstLetter) {
     if (!letters.includes(firstLetter)) {
         letters.push(firstLetter);
         letters.sort();
     }
 }
-
-
-//sort the name and create the letters
+/**
+ * sort the name and create the letters
+ * 
+ * 
+ */
 function sortNamesAndCreateLetters() {
     sortNames();
     createLetters();
 }
-
-
-// Sort the names alphabeticaly
+/**
+ * sort the names alphabetically
+ * 
+ * 
+ */
 function sortNames() {
     users[activeUser]['contacts'] = users[activeUser]['contacts'].sort((a, b) => {
         if (a.contactName < b.contactName) {
@@ -165,9 +199,11 @@ function sortNames() {
         }
     });
 }
-
-
-// to create the letter headlines
+/**
+ * to create the letter headlines
+ * 
+ * 
+ */
 function createLetters() {
     let contact = document.getElementById('contactList');
     contact.innerHTML = '';
@@ -177,15 +213,22 @@ function createLetters() {
     }
     createContact();
 }
-
-
+/**
+ * save the user and first letters in backend 
+ * 
+ * 
+ * @param {string} users - save user
+ * @param {string} letters - save first letters
+ */
 async function saveUsersAndLetters(users, letters) {
     await backend.setItem('users', JSON.stringify(users));
     await backend.setItem('letters', JSON.stringify(letters));
 }
-
-
-// Create contact from the inputFields and show at the contactlist
+/**
+ * Create contact from the inputFields and show at the contactlist
+ * 
+ * 
+ */
 function createContact() {
     for (let i = 0; i < users[activeUser]['contacts'].length; i++) {
         let name = users[activeUser]['contacts'][i]['contactName'];
@@ -196,10 +239,17 @@ function createContact() {
         createBigSection(name, email, letter, color, firstLetter, i);
     }
 }
-
-
-// to display the contactlist in alphabeticaly order with the letter headlines
-// and show the letter headlines only once
+/**
+ * to display the contactlist in alphabeticaly order with the letter headlines - and show the letter headlines only once
+ * 
+ * 
+ * @param {string} name - the name from contact
+ * @param {string} email - email from contact
+ * @param {string} letter - first letter from contact
+ * @param {string} color - the color from contact
+ * @param {string} firstLetter - first letter from contact
+ * @param {number} i - id from contact
+ */
 function createBigSection(name, email, letter, color, firstLetter, i) {
     let contactList = document.getElementById(`contactLetter-${firstLetter}`);
     if (!contactList) {
@@ -212,16 +262,21 @@ function createBigSection(name, email, letter, color, firstLetter, i) {
         contactList.innerHTML += contactDiv;
     }
 }
-
-
+/**
+ * last steps bevor contact create
+ * 
+ * 
+ */
 function lastStepsBeforeContactCreate() {
     emptyInputFields();
     closeContactBox();
     showContactBtn();
 }
-
-
-// empty the inputFields from the contact box
+/**
+ * empty the inputFields from the contact box
+ * 
+ * 
+ */
 function emptyInputFields() {
     let input1 = document.getElementById('input1');
     let input2 = document.getElementById('input2');
@@ -230,28 +285,37 @@ function emptyInputFields() {
     input2.value = '';
     input3.value = '';
 }
-
-
-// close the contactBox on purpose or after creation of new contant
+/**
+ * close the contactBox on purpose or after creation of new contant
+ * 
+ * 
+ */
 function closeContactBox() {
     document.getElementById('newContactBoxBckgr').style.display = 'none';
 }
-
-
-// Show the Button after a contact is created
+/**
+ * Show the Button after a contact is created
+ * 
+ * 
+ */
 function showContactBtn() {
     document.getElementById('contactCreated').style.display = 'block';
     setTimeout(closeContactBtn, 1000);
 }
-
-
-// Hide the Button after showContactBtn()
+/**
+ * Hide the Button after showContactBtn()
+ * 
+ * 
+ */
 function closeContactBtn() {
     document.getElementById('contactCreated').style.display = 'none';
 }
-
-
-// show the whole information of a contact
+/**
+ * show the whole information of a contact
+ * 
+ * 
+ * @param {number} i - the id from the contact
+ */
 function showContact(i) {
     document.getElementById('rightSection').style = 'display: block;'
     document.getElementById('rightSection').classList.remove('closeAnimation');
@@ -265,16 +329,22 @@ function showContact(i) {
     showContactAnimation(i);
     changeBckgrClr(i);
 }
-
-
-// show the animation of showCantct()
+/**
+ * show the animation of showContact()
+ * 
+ * 
+ * @param {number} i - the id from the contact
+ */
 function showContactAnimation(i) {
     document.getElementById(`contactBox${i}`).classList.add('animation');
     document.getElementById(`contactBox${i}`).classList.remove('d-none');
 }
-
-
-// change backgroundcolor of the clicked contact on the list
+/**
+ * change backgroundcolor of the clicked contact on the list
+ * 
+ * 
+ * @param {number} i the id from contact div to change backgroundcolor
+ */
 function changeBckgrClr(i) {
     for (let i = 0; i < users[activeUser]['contacts'].length; i++) {
         document.getElementById(`contactDiv${i}`).classList.remove('bg-blue');
@@ -287,9 +357,12 @@ function changeBckgrClr(i) {
     document.getElementById(`contactDiv${i}`).classList.add('clr-white');
     document.getElementById(`contactLetter${i}`).classList.add('border');
 }
-
-
-// display the box to edit an existing Contact
+/**
+ * display the box to edit an existing Contact
+ * 
+ * 
+ * @param {number} i - the id to edit contact box
+ */
 function showEditContactBox(i) {
     let color = users[activeUser]['contacts'][i]['contactColor'];
     let letters = getFirstLetters(users[activeUser]['contacts'][i]['contactName']);
@@ -301,9 +374,17 @@ function showEditContactBox(i) {
     document.getElementById('input2Filled').value = users[activeUser]['contacts'][i]['contactEmail'];
     document.getElementById('input3Filled').value = users[activeUser]['contacts'][i]['contactPhone'];
 }
-
-
-// to create the existing contact again, but with changed information
+/**
+ * to create the existing contact again, but with changed information
+ * 
+ * 
+ * @param {string} name - name from contact
+ * @param {string} email - email from contact
+ * @param {string} str - first letter from contact
+ * @param {string} color - color from contact
+ * @param {string} firstLetter - first letter from contact
+ * @param {number} i - id from contact to edit
+ */
 function createEditSection(name, email, str, color, firstLetter, i) {
     let contact = document.getElementById(`contactLetter-${firstLetter}`);
     contact.innerHTML = '';
@@ -311,16 +392,21 @@ function createEditSection(name, email, str, color, firstLetter, i) {
     renderLetters();
     renderContactList();
 }
-
-
-// close the editbox on purpose or after editing of existing contant
+/**
+ * close the editbox on purpose or after editing of existing contant
+ * 
+ * 
+ */
 function closeEditBox() {
     document.getElementById('editContactBoxBckgr').style.display = 'none';
     document.getElementById('editContactBoxBckgr').innerHTML = '';
 }
-
-
-// to save the edited contact information in array and display them
+/**
+ * to save the edited contact information in array and display them
+ * 
+ * 
+ * @param {number} i - the id from edit contact
+ */
 async function saveContactChanges(i) {
     let name = document.getElementById('input1Filled').value;
     let email = document.getElementById('input2Filled').value;
@@ -336,9 +422,12 @@ async function saveContactChanges(i) {
     showContact(i);
     closeEditBox();
 }
-
-
-//delete a contact
+/**
+ * delete a contact
+ * 
+ * 
+ * @param {number} i - the id from contact to delete
+ */
 async function deleteContact(i) {
     let deletedContact = users[activeUser]['contacts'][i];
     let firstLetter = users[activeUser]['contacts'][i]['contactName'].charAt(0);
@@ -354,17 +443,23 @@ async function deleteContact(i) {
     renderContactList();
     closeEditBox();
 }
-
-
-
-// show only the first letters of the name for the contact list
+/**
+ * show only the first letters of the name for the contact list
+ * 
+ * 
+ * @param {string} str - frist letter from contact
+ * @returns - first letter
+ */
 function getFirstLetters(str) {
     const firstLetters = str.split(' ').map(word => word[0]).join('');
     return firstLetters;
 }
-
-
-// Generate different Colors for each created Contact
+/**
+ * generate different Colors for each created Contact
+ * 
+ * 
+ * @returns - color from contact
+ */
 function getRandomColor() {
     let letters = '0123456789ABCDEF';
     let color = '#';
@@ -373,31 +468,40 @@ function getRandomColor() {
     }
     return color;
 }
-
-
-//open the log out button
+/**
+ * open the log out button
+ * 
+ * 
+ */
 function showLogOutButton() {
     document.getElementById('logOutButton').classList.remove('d-none');
     document.getElementById('logOutBackground').classList.remove('d-none');
     document.getElementById('userButton').style.removeProperty('cursor: pointer');
 }
-
-
-//close the log out button
+/**
+ * close the log out button
+ * 
+ * 
+ */
 function hideLogOutButton() {
     document.getElementById('logOutButton').classList.add('d-none');
     document.getElementById('logOutBackground').classList.add('d-none');
 }
-
-
-//log out
+/**
+ * log out
+ * 
+ * 
+ */
 async function logOut() {
     await backend.deleteItem('activeUser');
     await backend.deleteItem('letters');
     window.location.href = 'index.html';
 }
-
-//close the info container
+/**
+ * close the info container
+ * 
+ * 
+ */
 function closeMobileContactInfo() {
     document.getElementById('rightSection').classList.add('closeAnimation');
 }

@@ -1,3 +1,8 @@
+/**
+ * add new user 
+ * 
+ * 
+ */
 async function addUser() {
     let name = document.getElementById('input3name').value;
     let email = document.getElementById('input1email').value;
@@ -20,15 +25,21 @@ async function addUser() {
     emptySignUpInputFields();
     window.location.href = 'index.html';
 }
-
-
+/**
+ * empty inpuld fields
+ * 
+ * 
+ */
 function emptySignUpInputFields() {
     document.getElementById('input3name').value = '';
     document.getElementById('input1email').value = '';
     document.getElementById('input2password').value = '';
 }
-
-
+/**
+ * laod files from the user
+ * 
+ * 
+ */
 async function signUpInit() {
     await downloadFromServer();
     users = JSON.parse(backend.getItem('users')) || [];

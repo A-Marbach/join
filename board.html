@@ -9,12 +9,16 @@
     <link rel="stylesheet" href="./css/board.css">
 
     <script src="./js/data_protection.js"></script>
-    <script src="./mini_backend.js"></script>
-    <script src="./script.js"></script>
+    <script src="./js/mini_backend.js"></script>
+    <script src="./js/script.js"></script>
     <script src="./js/board.js"></script>
+    <script src="./js/assinged_to_task.js"></script>
+    <script src="./js/board_open_check_task.js"></script>
+    <script src="./js/board_classlist.js"></script>
+    <script src="./js/search_task.js"></script>
     <script src="./js/desktop_template.js"></script>
-    <script src="./template.js"></script>
-
+    <script src="./js/template.js"></script>
+    <script src="./js/template_2.js"></script>
     <script src="./js/task_form.js"></script>
 
     <link rel="icon" type="image/x-icon" href="./asseds/img/Capa 1.png">
@@ -44,21 +48,25 @@
                 </div>
 
                 <h2>What is Join?</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci doloribus eaque labore commodi ipsa rerum impedit, tempore, reiciendis dicta nostrum ducimus enim assumenda unde ab quos id, facilis possimus dolores.</p>
+                <p>A task manager inspired by the Kanban method. You can create and organize tasks using drag and drop,
+                    assign tasks to users and define subtasks.</p>
 
                 <h2>How to use it</h2>
 
                 <div class="flexContainer">
-                    <h3>1.</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis fuga explicabo sequi totam, id, cum, quibusdam vero neque numquam nemo rerum laborum. Pariatur dolor odit eos consequuntur alias porro magni.</p>
+                    <h3>1. create an account and add your contacts.</h3>
+
+                  
                 </div>
                 <div class="flexContainer">
-                    <h3>2.</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis fuga explicabo sequi totam, id, cum, quibusdam vero neque numquam nemo rerum laborum. Pariatur dolor odit eos consequuntur alias porro magni.</p>
+                    <h3>2. create as many tasks as you want.</h3>
+
+                  
                 </div>
                 <div class="flexContainer">
-                    <h3>3.</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis fuga explicabo sequi totam, id, cum, quibusdam vero neque numquam nemo rerum laborum. Pariatur dolor odit eos consequuntur alias porro magni.</p>
+                    <h3>3. On the board page you can edit your tasks and move them to the respective department.
+
+                   
                 </div>
             </div>
 
@@ -68,15 +76,37 @@
                     <img onclick="goBacktoMainContainers()" src="./asseds/img/Vector.png">
                 </div>
 
-                <h2>Bubtitle</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci doloribus eaque labore commodi ipsa rerum impedit, tempore, reiciendis dicta nostrum ducimus enim assumenda unde ab quos id, facilis possimus dolores.</p>
-
-                <h2>Subtitle</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci doloribus eaque labore commodi ipsa rerum impedit, tempore, reiciendis dicta nostrum ducimus enim assumenda unde ab quos id, facilis possimus dolores.</p>
+                <div class='impressum'>
+                      
+                    <p>Angaben gemäß § 5 TMG</p>
+                    <p>Max Muster <br>
+                        Musterweg<br>
+                        12345 Musterstadt <br>
+                    </p>
+                    <p> <strong>Vertreten durch: </strong><br>
+                        Max Muster<br>
+                    </p>
+                    <p><strong>Kontakt:</strong> <br>
+                        Telefon: 01234-789456<br>
+                        Fax: 1234-56789<br>
+                        E-Mail: <a href='mailto:max@muster.de'>max@muster.de</a></br></p>
+                    <p><strong>Umsatzsteuer-ID: </strong> <br>
+                        Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz: Musterustid.<br><br>
+                        <strong>Wirtschafts-ID: </strong><br>
+                        Musterwirtschaftsid<br>
+                    </p>
+                    <p><strong>Aufsichtsbehörde:</strong><br>
+                        Musteraufsicht Musterstadt<br></p>
+                   
+                    Impressum vom <a href="https://www.impressum-generator.de">Impressum Generator</a> der <a
+                        href="https://www.kanzlei-hasselbach.de/standorte/frankfurt/" rel="nofollow">Kanzlei
+                        Hasselbach, Frankfurt</a>
+                </div>
 
             </div>
 
-            <div id="dataProtection" w3-include-html="./asseds/templates/data_protection.html" class="dataProtection d-none"></div>
+            <div id="dataProtection" w3-include-html="./asseds/templates/data_protection.html"
+                class="dataProtection d-none"></div>
 
             <div class="mainContent" id="mainContent">
 
@@ -88,19 +118,22 @@
                         </div>
                         <div class="headerUnderRightMenuHeaderDiv">
                             <p class="headerUnderRightMenuHeaderHeadline">Board</p>
-                            <button onclick="addTaskRight('todo')" class="headerUnderRightMenuHeaderButtonSmall"><img class="addTaskImageSmall" src="./asseds/img/Group 11.png "></button>
+                            <button onclick="addTaskRight('todo')" class="headerUnderRightMenuHeaderButtonSmall"><img
+                                    class="addTaskImageSmall" src="./asseds/img/Group 11.png "></button>
                         </div>
                     </div>
                     <div class="headerUnderRightMenuHeaderBigDiv">
                         <div class="containerInputfield ">
-                            <input class="headerUnderRightMenuHeaderInputfield " type="text " id="search" onkeyup="searchToTask()" placeholder="Find Task ">
+                            <input class="headerUnderRightMenuHeaderInputfield " type="text " id="search"
+                                onkeyup="searchToTask()" placeholder="Find Task ">
                             <div class="searchImageDiv">
                                 <img class="containerInputfieldImage " src="./asseds/img/Vector (7).png ">
 
                             </div>
 
                         </div>
-                        <button onclick="addTaskRight('todo')" class="headerUnderRightMenuHeaderButton ">Add Task<img class="addTaskImage " src="./asseds/img/Group 11.png "></button>
+                        <button onclick="addTaskRight('todo')" class="headerUnderRightMenuHeaderButton ">Add Task<img
+                                class="addTaskImage " src="./asseds/img/Group 11.png "></button>
                     </div>
                 </div>
 
@@ -127,7 +160,9 @@
                             <button onclick="addTaskRight('todo')" class="plusButtonTodoList">+</button>
                         </div>
 
-                        <div id="containerTodos" class="containerTodo" ondragleave="removeHighlight('containerTodos')" ondrop="drop('todo'); removeHighlight('containerTodos')" ondragover="allowDrop(event); highlight('containerTodos')">
+                        <div id="containerTodos" class="containerTodo" ondragleave="removeHighlight('containerTodos')"
+                            ondrop="drop('todo'); removeHighlight('containerTodos')"
+                            ondragover="allowDrop(event); highlight('containerTodos')">
 
                         </div>
 
@@ -139,7 +174,10 @@
                             <button onclick="addTaskRight('progress')" class="plusButtonTodoList">+</button>
                         </div>
 
-                        <div id="containerProgresses" class="containerTodo" ondragleave="removeHighlight('containerProgresses')" ondrop="drop('progress'); removeHighlight('containerProgresses')" ondragover="allowDrop(event); highlight('containerProgresses')">
+                        <div id="containerProgresses" class="containerTodo"
+                            ondragleave="removeHighlight('containerProgresses')"
+                            ondrop="drop('progress'); removeHighlight('containerProgresses')"
+                            ondragover="allowDrop(event); highlight('containerProgresses')">
 
                         </div>
 
@@ -147,11 +185,15 @@
 
                     <div>
                         <div class="containerTodoListTodo">
-                            <p onclick="addTaskRight('feedback')" class="containerTodoListFeedback">Awaiting Feedback</p>
+                            <p onclick="addTaskRight('feedback')" class="containerTodoListFeedback">Awaiting Feedback
+                            </p>
                             <button onclick="addTaskRight('feedback')" class="plusButtonTodoList">+</button>
                         </div>
 
-                        <div id="containerFeedbacks" class="containerTodo" ondragleave="removeHighlight('containerFeedbacks')" ondrop="drop('feedback'); removeHighlight('containerFeedbacks')" ondragover="allowDrop(event); highlight('containerFeedbacks')">
+                        <div id="containerFeedbacks" class="containerTodo"
+                            ondragleave="removeHighlight('containerFeedbacks')"
+                            ondrop="drop('feedback'); removeHighlight('containerFeedbacks')"
+                            ondragover="allowDrop(event); highlight('containerFeedbacks')">
 
                         </div>
 
@@ -163,7 +205,9 @@
                             <button onclick="addTaskRight('done')" class="plusButtonTodoList">+</button>
                         </div>
 
-                        <div id="containerDones" class="containerTodo" ondragleave="removeHighlight('containerDones')" ondrop="drop('done'); removeHighlight('containerDones')" ondragover="allowDrop(event); highlight('containerDones')">
+                        <div id="containerDones" class="containerTodo" ondragleave="removeHighlight('containerDones')"
+                            ondrop="drop('done'); removeHighlight('containerDones')"
+                            ondragover="allowDrop(event); highlight('containerDones')">
 
                         </div>
 

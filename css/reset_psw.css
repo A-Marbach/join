@@ -284,6 +284,24 @@ body {
     display: none;
 }
 
+
+@media screen and (max-width: 950px) and (orientation: landscape){
+    .container{
+        overflow: auto!important; 
+        padding-top: 170px;
+        height: calc(100vh - 170px); 
+    }
+
+    .log-In-area{
+        overflow: auto;
+    }
+
+    .left-arrow{
+        
+        left: 90%;
+    }
+}
+
 @media screen and (max-width: 680px) {
     body {
         background-color: #F6F7F8;

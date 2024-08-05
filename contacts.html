@@ -6,17 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./template.js"></script>
-    <script src="./script.js"></script>
+    <script src="./js/template.js"></script>
+    <script src="./js/template_2.js"></script>
+    <script src="./js/script.js"></script>
     <script src="./js/sign_up.js"></script>
     <script src="./js/logIn.js"></script>
     <script src="./js/contacts.js"></script>
-    <script src="./mini_backend.js"></script>
+    <script src="./js/mini_backend.js"></script>
     <link rel="stylesheet" href="./css/contacts.css">
     <link rel="icon" type="image/x-icon" href="./asseds/img/Capa 1.png">
 </head>
 
-<body onload="contactInit(); includeHTML();">
+<body onload="contactInit()">
     <div id="logOutBackground" class="logOutBackground d-none" onclick="hideLogOutButton()"></div>
     <div class="content">
         <div class="desktopMenu" w3-include-html="./asseds/templates/desktop_template.html"></div>
@@ -43,21 +44,20 @@
                     </div>
 
                     <h2>What is Join?</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci doloribus eaque labore commodi ipsa rerum impedit, tempore, reiciendis dicta nostrum ducimus enim assumenda unde ab quos id, facilis possimus dolores.</p>
+                    <p>A task manager inspired by the Kanban method. You can create and organize tasks using drag and
+                        drop, assign tasks to users and define subtasks.</p>
 
-                    <h2>How to use it</h2>
+                    <h2>How to use it?</h2>
 
                     <div class="flexContainer">
-                        <h3>1.</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis fuga explicabo sequi totam, id, cum, quibusdam vero neque numquam nemo rerum laborum. Pariatur dolor odit eos consequuntur alias porro magni.</p>
+                        <h3>1. create an account and add your contacts.</h3>
                     </div>
                     <div class="flexContainer">
-                        <h3>2.</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis fuga explicabo sequi totam, id, cum, quibusdam vero neque numquam nemo rerum laborum. Pariatur dolor odit eos consequuntur alias porro magni.</p>
+                        <h3>2. create as many tasks as you want.</h3>
                     </div>
                     <div class="flexContainer">
-                        <h3>3.</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis fuga explicabo sequi totam, id, cum, quibusdam vero neque numquam nemo rerum laborum. Pariatur dolor odit eos consequuntur alias porro magni.</p>
+                        <h3>3. On the board page you can edit your tasks and move them to the respective department.
+                        </h3>
                     </div>
                 </div>
 
@@ -67,15 +67,40 @@
                         <img onclick="goBacktoMainContainers()" src="./asseds/img/Vector.png">
                     </div>
 
-                    <h2>Bubtitle</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci doloribus eaque labore commodi ipsa rerum impedit, tempore, reiciendis dicta nostrum ducimus enim assumenda unde ab quos id, facilis possimus dolores.</p>
+                    <div class='impressum'>
+                      
+                        <p>Angaben gemäß § 5 TMG</p>
+                        <p>Max Muster <br>
+                            Musterweg<br>
+                            12345 Musterstadt <br>
+                        </p>
+                        <p> <strong>Vertreten durch: </strong><br>
+                            Max Muster<br>
+                        </p>
+                        <p><strong>Kontakt:</strong> <br>
+                            Telefon: 01234-789456<br>
+                            Fax: 1234-56789<br>
+                            E-Mail: <a href='mailto:max@muster.de'>max@muster.de</a></br></p>
+                        <p><strong>Umsatzsteuer-ID: </strong> <br>
+                            Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz: Musterustid.<br><br>
+                            <strong>Wirtschafts-ID: </strong><br>
+                            Musterwirtschaftsid<br>
+                        </p>
+                        <p><strong>Aufsichtsbehörde:</strong><br>
+                            Musteraufsicht Musterstadt<br></p>
+                       
+                        Impressum vom <a href="https://www.impressum-generator.de">Impressum Generator</a> der <a
+                            href="https://www.kanzlei-hasselbach.de/standorte/frankfurt/" rel="nofollow">Kanzlei
+                            Hasselbach, Frankfurt</a>
+                    </div>
 
-                    <h2>Subtitle</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci doloribus eaque labore commodi ipsa rerum impedit, tempore, reiciendis dicta nostrum ducimus enim assumenda unde ab quos id, facilis possimus dolores.</p>
+
+
 
                 </div>
 
-                <div id="dataProtection" w3-include-html="./asseds/templates/data_protection.html" class="dataProtection d-none"></div>
+                <div id="dataProtection" w3-include-html="./asseds/templates/data_protection.html"
+                    class="dataProtection d-none"></div>
 
 
                 <div class="rightSection" id="rightSection">
@@ -83,7 +108,8 @@
                         <div class="showContactHeader">
                             <p class="mobileHeader">Kanban Project Management Tool</p>
                             <h1 class="showContactHeaderH1">Contacts</h1>
-                            <img onclick="closeMobileContactInfo()" class="closeArrow d-none" src="./asseds/img/closeArrowBlack.png">
+                            <img onclick="closeMobileContactInfo()" class="closeArrow d-none"
+                                src="./asseds/img/closeArrowBlack.png">
                             <div class="line"></div>
                             <p>Better with a team</p>
                         </div>
@@ -103,7 +129,8 @@
                 <div id="newContactBoxBckgr" style="display: none;" class="newContactBoxBckgr">
                     <div id="newContactBox" class="newContactBox">
                         <img onclick="closeContactBox()" class="closeImg" src="./asseds/img/cross.png">
-                        <img onclick="closeContactBox()" class="closeImgMobile d-none" src="./asseds/img/closewhite.png">
+                        <img onclick="closeContactBox()" class="closeImgMobile d-none"
+                            src="./asseds/img/closewhite.png">
                         <div class="leftContent">
                             <img src="./asseds/img/littleLogo.png">
                             <h1>Add Contact</h1>

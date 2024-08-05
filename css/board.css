@@ -8,7 +8,16 @@ body {
     height: 100vh;
     width: 100vw;
     background-color: #F5F5F5;
-    overflow: auto;
+    /* overflow: auto; */
+}
+
+.noTaskWithBorder{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    border: dashed lightgray;
+    padding: 4px;
 }
 
 .rightContent::-webkit-scrollbar {
@@ -59,7 +68,7 @@ body {
     padding-left: 6%;
     padding-right: 5%;
     overflow: scroll;
-    height: 779px;
+    height: 100vh;
 }
 
 .mainContent::-webkit-scrollbar {
@@ -184,6 +193,8 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
+    padding-bottom: 64px;
+    
 }
 
 .containerTodoListTodo {
@@ -1159,7 +1170,6 @@ h3 {
 
 @media(max-width: 1024px) {
     .headerHelp h1 {
-        margin-top: 0;
         font-size: 40px;
     }
     .mainContainerHelp {
@@ -1276,11 +1286,13 @@ h3 {
         height: 90vh;
         border-radius: 30px;
         position: relative;
+        overflow: auto;
     }
     .toEditopenCheckTaskBigDiv {
         margin-top: 30px;
         margin-left: 42px;
         margin-right: 35px;
+        margin-bottom: 320px;
     }
     .toEditTaskTitelInput {
         width: 93%;

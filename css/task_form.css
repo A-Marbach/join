@@ -19,7 +19,6 @@
 
     .flexContainer {
         display: flex;
-        padding-left: 70px;
     }
 
     .leftContainer {
@@ -29,7 +28,8 @@
     .rightContainer {
         display: flex;
         flex-direction: column;
-        padding-left: 300px;
+        padding-left: 200px;
+        height: calc(100vh - 80px);
     }
 
     .containerForm {
@@ -45,7 +45,8 @@
         font-weight: bold;
         font-size: 61px;
         color: #000000;
-        margin-bottom: 20px;
+        margin-bottom: 0;
+        margin-top: 26px;
     }
 
     .leftContainerI {
@@ -493,7 +494,7 @@
         list-style-type: none;
         height: 133px;
         overflow: scroll;
-        overflow-x: hidden;
+        max-height: 80px;
     }
 
     .assignedToList::-webkit-scrollbar {
@@ -548,7 +549,7 @@
 
     .addCategoryInTask {
         height: 30px;
-        width: 120px;
+        /* width: 120px; */
         border-radius: 5px;
         display: flex;
         justify-content: center;
@@ -594,9 +595,65 @@
         align-items: center;
     }
 
+    .subtaskToEdit {
+        position: relative;
+    }
+
+    .subtsasksCancelImgEdit{
+        position: absolute;
+        right: 50px;
+        top: -34px;
+        cursor: pointer;
+    }
+
+    .subtasksSsubLineEdit{
+        width: 0px;
+        height: 30px;
+        border: 1px solid lightgray;
+        position: absolute;
+        right: 46px;
+        top: -36px;
+    }
+
+    .subtasksChackImgEdit{
+        position: absolute;
+        right: 23px;
+        top: -28px;
+        cursor: pointer;
+    }
+
+    .subtaskIMGEdit{
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        right: 35px;
+        top: 12px;
+    }
+
+    .smallRelativeContainerEdit{
+        position: relative;
+    }
+
+    .subtaskToEdit input {
+        width: 432px;
+        height: 35px;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+
     .checkboxSubtasksContainer {
         display: flex;
         align-items: center;
+    }
+
+    .deleteSubtask {
+        margin-left: 16px;
+        color: red;
+        font-size: 18px;
+    }
+
+    .deleteSubtask:hover {
+        cursor: pointer;
     }
 
     .btn {
@@ -609,6 +666,9 @@
     .subtaskContainer {
         display: flex;
         flex-direction: column;
+        max-height: 120px;
+        overflow: auto;
+
     }
 
     .subtasksComent {
@@ -624,6 +684,32 @@
         cursor: pointer;
     }
 
+    @media screen and (max-width: 950px) and (orientation: landscape) {
+        .rightContainer {
+            /* height: calc(100vh -160px); */
+            padding-bottom: 350px;
+        }
+
+        .checkTaskSmall {
+            height: 100vh;
+
+        }
+
+        .openCheckTaskBigDiv {
+            margin: 0;
+            width: 90%;
+            padding-bottom: 400px;
+
+        }
+    }
+
+    @media (max-width: 1600px) {
+        .rightContainer {
+            padding-left: 200px;
+        }
+    }
+
+
     @media(max-width: 1500px) {
         .middleLine {
             left: 50%;
@@ -633,9 +719,7 @@
             padding-left: 60px;
         }
 
-        .rightContainer {
-            padding-left: 200px;
-        }
+
     }
 
     @media(max-width: 1480px) {
@@ -1414,6 +1498,8 @@
             margin-top: 60px;
             margin-right: 140px;
             margin-left: 30px;
+            /* overflow: auto; */
+            margin-bottom: 200px;
         }
 
         .closes4 {
@@ -1737,6 +1823,10 @@
             margin-left: 30px;
         }
 
+        .prioContainer {
+            margin-right: 20px;
+        }
+
         .closes4 {
             top: 114px;
             left: 73%;
@@ -1759,7 +1849,7 @@
 
     @media(max-width: 470px) {
         .prioContainer {
-            margin-right: 26px;
+            margin-right: 10px;
         }
 
         .categoryList {
@@ -1770,7 +1860,7 @@
 
     @media(max-width: 440px) {
         .prioContainer {
-            margin-right: 23px;
+            margin-right: 10px;
         }
 
         .leftContainerTextarea {
@@ -2012,11 +2102,6 @@
             border-radius: 10px;
             height: 27px;
         }
-
-        .flexContainer {
-            display: flex;
-            padding-left: 30px;
-        }
     }
 
     @media(max-width: 412px) {
@@ -2063,8 +2148,17 @@
     }
 
     @media(max-width: 400px) {
-        .prioContainer {
-            margin-right: 20px;
+        .prio{
+            display: flex;
+            flex-direction: column;
+           
+          
+        }
+
+        .prioContainer{
+            padding: 10px;
+            margin: 4px;
+            width: 100%;
         }
     }
 
@@ -2401,11 +2495,6 @@
             border-radius: 10px;
             height: 27px;
         }
-
-        .flexContainer {
-            display: flex;
-            padding-left: 40px;
-        }
     }
 
     @media(max-width: 370px) {
@@ -2431,6 +2520,7 @@
             margin-top: 0px;
             margin-left: 30px;
             margin-right: 31px;
+
         }
 
         .checkTaskSmall {

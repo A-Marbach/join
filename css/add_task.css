@@ -118,6 +118,7 @@ body {
 
 .mainContent {
     padding-left: 100px;
+    overflow: auto;
 }
 
 .mainContainerHelp {
@@ -258,8 +259,9 @@ h2 {
 
 .flexContainer {
     display: flex;
-    padding-left: 100px;
+    padding-left: 50px;
     margin-top: 10px;
+
 }
 
 .leftContainer {
@@ -371,6 +373,7 @@ h2 {
 .rightContainer {
     display: flex;
     flex-direction: column;
+
 }
 
 .dateImg {
@@ -388,6 +391,16 @@ h2 {
     cursor: pointer;
 }
 
+.deleteSubtask {
+    margin-left: 16px;
+    color: red;
+    font-size: 18px;
+}
+
+.deleteSubtask:hover {
+    cursor: pointer;
+}
+
 .checkbox {
     max-width: 25px;
     width: 16px;
@@ -398,6 +411,9 @@ h2 {
 
 .subtaskContainer {
     display: flex;
+    max-height: 124px;
+    margin-bottom: 50px;
+    overflow: auto;
 }
 
 
@@ -602,7 +618,7 @@ select {
     height: 133px;
     overflow: scroll;
     overflow-x: hidden;
-    width: 81.2%;
+    width: 77%;
     background-color: white;
 }
 
@@ -728,7 +744,7 @@ select {
     padding-left: 0px;
     list-style-type: none;
     height: 133px;
-    width: 81.2%;
+    width: 77%;
     overflow: scroll;
     overflow-x: hidden;
     background-color: white;
@@ -964,7 +980,7 @@ select {
     justify-content: space-between;
 }
 
-input[type="checkbox" i] {
+input[type="checkbox"i] {
     background-color: initial;
     cursor: default;
     appearance: auto;
@@ -976,13 +992,15 @@ input[type="checkbox" i] {
 
 @media (max-width: 1700px) {
     .addTask_categoryList {
-        width: 82.3%;
+        width: 100% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 82.3%;
+        width: 82.3% !important;
         background-color: white;
     }
+
     .prioContainer {
         margin-right: 33px;
     }
@@ -990,13 +1008,15 @@ input[type="checkbox" i] {
 
 @media (max-width: 1670px) {
     .addTask_categoryList {
-        width: 82.9%;
+        width: 79.8% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 82.9%;
+        width: 79.8% !important;
         background-color: white;
     }
+
     .prioContainer {
         margin-right: 33px;
     }
@@ -1004,13 +1024,15 @@ input[type="checkbox" i] {
 
 @media (max-width: 1650px) {
     .addTask_categoryList {
-        width: 83%;
+        width: 80.1% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 83%;
+        width: 80.1% !important;
         background-color: white;
     }
+
     .prioContainer {
         margin-right: 33px;
     }
@@ -1018,13 +1040,15 @@ input[type="checkbox" i] {
 
 @media (max-width: 1620px) {
     .addTask_categoryList {
-        width: 83.6%;
+        width: 80.5% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 83.6%;
+        width: 80.5% !important;
         background-color: white;
     }
+
     .prioContainer {
         margin-right: 33px;
     }
@@ -1032,13 +1056,15 @@ input[type="checkbox" i] {
 
 @media (max-width: 1590px) {
     .addTask_categoryList {
-        width: 84.3%;
+        width: 81% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 84.3%;
+        width: 81% !important;
         background-color: white;
     }
+
     .prioContainer {
         margin-right: 33px;
     }
@@ -1046,27 +1072,33 @@ input[type="checkbox" i] {
 
 @media (max-width: 1570px) {
     .addTask_categoryList {
-        width: 84.6%;
+        width: 81.3% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 84.6%;
+        width: 81.3% !important;
         background-color: white;
     }
+
     .prioContainer {
         margin-right: 33px;
     }
+
+
 }
 
 @media (max-width: 1550px) {
     .addTask_categoryList {
-        width: 84.9%;
+        width: 81.5% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 84.9%;
+        width: 81.5% !important;
         background-color: white;
     }
+
     .prioContainer {
         margin-right: 33px;
     }
@@ -1074,13 +1106,15 @@ input[type="checkbox" i] {
 
 @media (max-width: 1530px) {
     .addTask_categoryList {
-        width: 85.3%;
+        width: 82% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 85.3%;
+        width: 82% !important;
         background-color: white;
     }
+
     .prioContainer {
         margin-right: 33px;
     }
@@ -1088,13 +1122,15 @@ input[type="checkbox" i] {
 
 @media (max-width: 1510px) {
     .addTask_categoryList {
-        width: 85.5%;
+        width: 82.5% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 85.5%;
+        width: 82.5% !important;
         background-color: white;
     }
+
     .prioContainer {
         margin-right: 33px;
     }
@@ -1102,13 +1138,15 @@ input[type="checkbox" i] {
 
 @media (max-width: 1500px) {
     .addTask_categoryList {
-        width: 85.8%;
+        width: 83% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 85.8%;
+        width: 83% !important;
         background-color: white;
     }
+
     .prioContainer {
         margin-right: 28px;
     }
@@ -1116,35 +1154,39 @@ input[type="checkbox" i] {
 
 @media (max-width: 1470px) {
     .addTask_categoryList {
-        width: 86.5%;
+        width: 83.6% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 86.5%;
+        width: 83.6% !important;
         background-color: white;
     }
 }
 
 @media (max-width: 1440px) {
     .addTask_categoryList {
-        width: 86.9%;
+        width: 83.6% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 86.9%;
+        width: 83.6% !important;
         background-color: white;
     }
 }
 
 @media (max-width: 1420px) {
     .addTask_categoryList {
-        width: 87.4%;
+        width: 83.6% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 87.4%;
+        width: 83.6% !important;
         background-color: white;
     }
+
     .prioContainer {
         margin-right: 26px;
     }
@@ -1152,24 +1194,27 @@ input[type="checkbox" i] {
 
 @media (max-width: 1400px) {
     .addTask_categoryList {
-        width: 88.2%;
+        width: 84.3% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 88.2%;
+        width: 84.3% !important;
         background-color: white;
     }
 }
 
 @media (max-width: 1370px) {
     .addTask_categoryList {
-        width: 88.9%;
+        width: 85% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 88.9%;
+        width: 85% !important;
         background-color: white;
     }
+
     .prioContainer {
         margin-right: 24px;
     }
@@ -1177,24 +1222,27 @@ input[type="checkbox" i] {
 
 @media (max-width: 1360px) {
     .addTask_categoryList {
-        width: 89.2%;
+        width: 85% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 89.2%;
+        width: 85% !important;
         background-color: white;
     }
 }
 
 @media (max-width: 1340px) {
     .addTask_categoryList {
-        width: 89.6%;
+        width: 85.5% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 89.6%;
+        width: 85.5% !important;
         background-color: white;
     }
+
     .prioContainer {
         margin-right: 23px;
     }
@@ -1202,24 +1250,27 @@ input[type="checkbox" i] {
 
 @media (max-width: 1320px) {
     .addTask_categoryList {
-        width: 90.2%;
+        width: 86% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 90.2%;
+        width: 86% !important;
         background-color: white;
     }
 }
 
 @media (max-width: 1300px) {
     .addTask_categoryList {
-        width: 90.8%;
+        width: 86.3% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 90.8%;
+        width: 86.3% !important;
         background-color: white;
     }
+
     .prioContainer {
         margin-right: 22px;
     }
@@ -1227,22 +1278,24 @@ input[type="checkbox" i] {
 
 @media (max-width: 1280px) {
     .addTask_categoryList {
-        width: 91.2%;
+        width: 87% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 91.2%;
+        width: 87% !important;
         background-color: white;
     }
 }
 
 @media (max-width: 1260px) {
     .addTask_categoryList {
-        width: 91.9%;
+        width: 87.5% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 91.9%;
+        width: 87.5% !important;
         background-color: white;
     }
 }
@@ -1251,20 +1304,21 @@ input[type="checkbox" i] {
     .btn {
         right: 100px !important;
     }
-    .flexContainer {
-        padding-left: 50px;
-    }
+
     .mainContent {
         padding-left: 50px;
     }
+
     .addTask_categoryList {
-        width: 87.9% !important;
+        width: 87.6% !important;
         background-color: white;
     }
+
     .assignedToList {
         width: 87.9% !important;
         background-color: white;
     }
+
     .prioContainer {
         margin-right: 19px;
     }
@@ -1275,10 +1329,12 @@ input[type="checkbox" i] {
         width: 88% !important;
         background-color: white;
     }
+
     .assignedToList {
         width: 88% !important;
         background-color: white;
     }
+
     .prioContainer {
         margin-right: 18px;
     }
@@ -1286,9 +1342,10 @@ input[type="checkbox" i] {
 
 @media (max-width: 1210px) {
     .addTask_categoryList {
-        width: 88.7% !important;
+        width: 89% !important;
         background-color: white;
     }
+
     .assignedToList {
         width: 88.7% !important;
         background-color: white;
@@ -1300,6 +1357,7 @@ input[type="checkbox" i] {
         width: 89.1% !important;
         background-color: white;
     }
+
     .assignedToList {
         width: 89.1% !important;
         background-color: white;
@@ -1311,10 +1369,12 @@ input[type="checkbox" i] {
         width: 89.8% !important;
         background-color: white;
     }
+
     .assignedToList {
         width: 89.8% !important;
         background-color: white;
     }
+
     .prioContainer {
         margin-right: 17px;
     }
@@ -1325,6 +1385,7 @@ input[type="checkbox" i] {
         width: 90.4% !important;
         background-color: white;
     }
+
     .assignedToList {
         width: 90.4% !important;
         background-color: white;
@@ -1336,6 +1397,7 @@ input[type="checkbox" i] {
         width: 90.9% !important;
         background-color: white;
     }
+
     .assignedToList {
         width: 90.9% !important;
         background-color: white;
@@ -1347,10 +1409,12 @@ input[type="checkbox" i] {
         width: 91.8% !important;
         background-color: white;
     }
+
     .assignedToList {
         width: 91.8% !important;
         background-color: white;
     }
+
     .prioContainer {
         margin-right: 15px;
     }
@@ -1360,35 +1424,45 @@ input[type="checkbox" i] {
     .btn {
         right: 50px !important;
     }
+
     .titlesInputfild {
         width: 28vw;
     }
+
     .leftContainer textarea {
         width: 29vw;
     }
+
     .addTask_categoryDiv {
         width: 28vw;
     }
+
     .assignedDiv {
         width: 28vw;
     }
+
     .assignedDiv {
         width: 28vw;
     }
+
     .rightContainer input {
         width: 32vw;
     }
+
     .leftContainer {
         width: 46%;
     }
+
     .addTask_categoryList {
         width: 91.4% !important;
         background-color: white;
     }
+
     .assignedToList {
         width: 91.4% !important;
         background-color: white;
     }
+
     .prioContainer {
         margin-right: 19px;
     }
@@ -1399,6 +1473,7 @@ input[type="checkbox" i] {
         width: 92.2% !important;
         background-color: white;
     }
+
     .assignedToList {
         width: 92.2% !important;
         background-color: white;
@@ -1410,6 +1485,7 @@ input[type="checkbox" i] {
         width: 92.9% !important;
         background-color: white;
     }
+
     .assignedToList {
         width: 92.9% !important;
         background-color: white;
@@ -1421,6 +1497,7 @@ input[type="checkbox" i] {
         width: 93.6% !important;
         background-color: white;
     }
+
     .assignedToList {
         width: 93.6% !important;
         background-color: white;
@@ -1432,10 +1509,12 @@ input[type="checkbox" i] {
         width: 94.6% !important;
         background-color: white;
     }
+
     .assignedToList {
         width: 94.6% !important;
         background-color: white;
     }
+
     .prioContainer {
         margin-right: 17px;
     }
@@ -1445,14 +1524,17 @@ input[type="checkbox" i] {
     .addTask_selectTaskCategory {
         font-size: 18px;
     }
+
     .addTask_categoryList {
         width: 95.6% !important;
         background-color: white;
     }
+
     .assignedToList {
         width: 95.6% !important;
         background-color: white;
     }
+
     .prioContainer {
         margin-right: 15px;
     }
@@ -1462,76 +1544,97 @@ input[type="checkbox" i] {
     .header {
         display: none !important;
     }
+
     .mobileText {
         display: block !important;
     }
+
     .flexContainer {
         display: block;
         margin-left: 5%;
         margin-right: 5%;
         padding-left: 0;
-        height: 100vh;
     }
+
     #btn {
         display: none;
     }
+
     .titlesInputfild {
         width: 81vw;
     }
+
     .leftContainer textarea {
         width: 82vw;
     }
+
     .addTask_categoryDiv {
         width: 80vw;
     }
+
     .assignedDiv {
         width: 82vw;
     }
+
     .assignedDiv {
         width: 80vw;
     }
+
     .rightContainer input {
         width: 82vw;
     }
+
     .middleLine {
         display: none;
     }
+
     .headerContent p {
         display: none;
     }
+
     .personLogIn {
         display: none;
     }
+
     .information {
         display: none;
     }
+
     .logOutButton {
         display: none;
     }
+
     .headline {
         display: block;
     }
+
     .mainContent {
         padding: 0;
         margin-left: 5%;
     }
+
     .prioContainer {
         width: 24vw;
     }
+
     .relativeContainer {
         margin-bottom: 15px;
     }
+
     #logoMobile {
         display: block !important;
     }
+
     #createTask {
         display: block !important;
     }
+
     .miniTemplate {
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
     .btnCreate {
         position: fixed;
         right: 22px;
@@ -1540,25 +1643,31 @@ input[type="checkbox" i] {
         height: 51px;
         font-size: 2vh;
     }
+
     .btnClear {
         display: none;
     }
+
     .addTask_categoryList {
-        width: 202% !important;
+        width: 202.2% !important;
         background-color: white;
     }
+
     .assignedToList {
         width: 202% !important;
         background-color: white;
     }
+
     .mainContents {
         overflow: scroll;
-        height: 710px;
+        height: calc(100vh - 160px);
     }
+
     .prioContainer {
         padding: 10px;
         margin-right: 23px;
     }
+
     .selectionMessage {
         padding: 30px;
         width: 326px;
@@ -1572,11 +1681,12 @@ input[type="checkbox" i] {
 
 @media (max-width: 950px) {
     .addTask_categoryList {
-        width: 202.3% !important;
+        width: 202.5% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 202.3% !important;
+        width: 202.5% !important;
         background-color: white;
     }
 }
@@ -1586,12 +1696,14 @@ input[type="checkbox" i] {
         padding: 10px;
         margin-right: 20px;
     }
+
     .addTask_categoryList {
-        width: 202.8% !important;
+        width: 203% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 202.8% !important;
+        width: 203% !important;
         background-color: white;
     }
 }
@@ -1601,10 +1713,12 @@ input[type="checkbox" i] {
         padding: 10px;
         margin-right: 18px;
     }
+
     .addTask_categoryList {
         width: 203.5% !important;
         background-color: white;
     }
+
     .assignedToList {
         width: 203.5% !important;
         background-color: white;
@@ -1616,14 +1730,17 @@ input[type="checkbox" i] {
         padding: 10px;
         margin-right: 16px;
     }
+
     .addTask_categoryList {
-        width: 203.9% !important;
+        width: 204.3% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 203.9% !important;
+        width: 204.3% !important;
         background-color: white;
     }
+
     .selectionMessage {
         padding-left: 20px;
         padding-right: 20px;
@@ -1642,12 +1759,14 @@ input[type="checkbox" i] {
         padding: 10px;
         margin-right: 14px;
     }
+
     .addTask_categoryList {
-        width: 204.7% !important;
+        width: 205% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 204.7% !important;
+        width: 205% !important;
         background-color: white;
     }
 }
@@ -1657,20 +1776,25 @@ input[type="checkbox" i] {
         padding: 10px;
         margin-right: 12px;
     }
+
     .addTask_categoryList {
-        width: 205.6% !important;
+        width: 205.9% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 205.6% !important;
+        width: 205.9% !important;
         background-color: white;
     }
+
     .leftContainer textarea {
         width: 83vw;
     }
+
     .rightContainer input {
         width: 83vw;
     }
+
     .selectionMessage {
         padding-left: 20px;
         padding-right: 20px;
@@ -1689,20 +1813,25 @@ input[type="checkbox" i] {
         padding: 10px;
         margin-right: 10px;
     }
+
     .addTask_categoryList {
-        width: 206.6% !important;
+        width: 207% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 206.6% !important;
+        width: 207% !important;
         background-color: white;
     }
+
     .leftContainer textarea {
         width: 83vw;
     }
+
     .rightContainer input {
         width: 83vw;
     }
+
     .selectionMessage {
         padding-left: 20px;
         padding-right: 20px;
@@ -1721,20 +1850,25 @@ input[type="checkbox" i] {
         padding: 10px;
         margin-right: 8px;
     }
+
     .addTask_categoryList {
-        width: 207.5% !important;
+        width: 207.7% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 207.5% !important;
+        width: 207.7% !important;
         background-color: white;
     }
+
     .leftContainer textarea {
         width: 83vw;
     }
+
     .rightContainer input {
         width: 83vw;
     }
+
     .selectionMessage {
         padding-left: 20px;
         padding-right: 20px;
@@ -1753,20 +1887,25 @@ input[type="checkbox" i] {
         padding: 10px;
         margin-right: 6px;
     }
+
     .addTask_categoryList {
-        width: 208.8% !important;
+        width: 209.2% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 208.8% !important;
+        width: 209.2% !important;
         background-color: white;
     }
+
     .leftContainer textarea {
         width: 83vw;
     }
+
     .rightContainer input {
         width: 83vw;
     }
+
     .selectionMessage {
         padding-left: 20px;
         padding-right: 20px;
@@ -1778,6 +1917,7 @@ input[type="checkbox" i] {
         text-align: center;
         top: 69%;
     }
+
     .mainContainerHelp {
         padding-left: 50px;
         padding-right: 50px;
@@ -1788,13 +1928,15 @@ input[type="checkbox" i] {
 
 @media (max-width: 540px) {
     .addTask_categoryList {
-        width: 213.8% !important;
+        width: 216.5% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 213.8% !important;
+        width: 216.5% !important;
         background-color: white;
     }
+
     .btnCreate {
         position: fixed;
         right: 22px;
@@ -1803,25 +1945,31 @@ input[type="checkbox" i] {
         height: 45px;
         font-size: 15px;
     }
+
     .assignedDiv {
         width: 83.2vw;
     }
+
     .addTask_categoryDiv {
         width: 83vw;
     }
+
     .leftContainer textarea {
         width: 86.5vw;
         font-size: 19px;
     }
+
     .titlesInputfild {
         width: 84vw;
         font-size: 19px;
     }
+
     .prioContainer {
         padding: 10px;
         margin-right: -2px;
         width: 36vw;
     }
+
     .selectionMessage {
         padding-left: 20px;
         padding-right: 20px;
@@ -1833,10 +1981,12 @@ input[type="checkbox" i] {
         text-align: center;
         top: 69%;
     }
+
     .mainContents {
         overflow: scroll;
         height: 560px;
     }
+
     .rightContainer input {
         width: 87vw;
     }
@@ -1844,11 +1994,12 @@ input[type="checkbox" i] {
 
 @media (max-width: 525px) {
     .addTask_categoryList {
-        width: 209.4% !important;
+        width: 217.5% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 209.4% !important;
+        width: 217.5% !important;
         background-color: white;
     }
 }
@@ -1857,30 +2008,38 @@ input[type="checkbox" i] {
     .titlesInputfild {
         width: 83vw;
     }
+
     .leftContainer textarea {
         width: 85vw;
     }
+
     .addTask_categoryDiv {
         width: 81vw;
     }
+
     .assignedDiv {
         width: 78vw;
     }
+
     .assignedDiv {
         width: 81vw;
     }
+
     .rightContainer input {
         width: 85vw;
     }
+
     .prioContainer {
         padding: 10px;
         margin-right: 8px;
         width: 36vw;
     }
+
     .addTask_categoryList {
         width: 212.8% !important;
         background-color: white;
     }
+
     .assignedToList {
         width: 212.8% !important;
         background-color: white;
@@ -1892,6 +2051,7 @@ input[type="checkbox" i] {
         width: 213.8% !important;
         background-color: white;
     }
+
     .assignedToList {
         width: 213.8% !important;
         background-color: white;
@@ -1903,6 +2063,7 @@ input[type="checkbox" i] {
         width: 214.5% !important;
         background-color: white;
     }
+
     .assignedToList {
         width: 214.5% !important;
         background-color: white;
@@ -1914,6 +2075,7 @@ input[type="checkbox" i] {
         width: 215.2% !important;
         background-color: white;
     }
+
     .assignedToList {
         width: 215.2% !important;
         background-color: white;
@@ -1925,6 +2087,7 @@ input[type="checkbox" i] {
         width: 215.8% !important;
         background-color: white;
     }
+
     .assignedToList {
         width: 215.8% !important;
         background-color: white;
@@ -1936,10 +2099,12 @@ input[type="checkbox" i] {
         width: 213.8% !important;
         background-color: white;
     }
+
     .assignedToList {
         width: 213.8% !important;
         background-color: white;
     }
+
     .btnCreate {
         position: fixed;
         right: 22px;
@@ -1948,25 +2113,31 @@ input[type="checkbox" i] {
         height: 45px;
         font-size: 15px;
     }
+
     .assignedDiv {
         width: 80vw;
     }
+
     .addTask_categoryDiv {
         width: 80vw;
     }
+
     .leftContainer textarea {
         width: 84.5vw;
         font-size: 19px;
     }
+
     .titlesInputfild {
         width: 82vw;
         font-size: 19px;
     }
+
     .prioContainer {
         padding: 10px;
         margin-right: 3px;
         width: 36vw;
     }
+
     .selectionMessage {
         padding-left: 20px;
         padding-right: 20px;
@@ -1978,6 +2149,7 @@ input[type="checkbox" i] {
         text-align: center;
         top: 69%;
     }
+
     .mainContents {
         overflow: scroll;
         height: 734px;
@@ -1986,13 +2158,15 @@ input[type="checkbox" i] {
 
 @media (max-width: 412px) {
     .addTask_categoryList {
-        width: 214% !important;
+        width: 214.5% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 214% !important;
+        width: 214.5% !important;
         background-color: white;
     }
+
     .btnCreate {
         position: fixed;
         right: 22px;
@@ -2001,25 +2175,31 @@ input[type="checkbox" i] {
         height: 45px;
         font-size: 15px;
     }
+
     .assignedDiv {
         width: 80vw;
     }
+
     .addTask_categoryDiv {
         width: 80vw;
     }
+
     .leftContainer textarea {
         width: 84.5vw;
         font-size: 19px;
     }
+
     .titlesInputfild {
         width: 82vw;
         font-size: 19px;
     }
+
     .prioContainer {
         padding: 10px;
         margin-right: 3px;
         width: 36vw;
     }
+
     .selectionMessage {
         padding-left: 20px;
         padding-right: 20px;
@@ -2031,9 +2211,15 @@ input[type="checkbox" i] {
         text-align: center;
         top: 69%;
     }
+
     .mainContents {
         overflow: scroll;
         height: 754px;
+    }
+
+    .subtaskContainer {
+        margin-bottom: 150px !important;
+
     }
 }
 
@@ -2042,15 +2228,18 @@ input[type="checkbox" i] {
         font-size: 18px;
         margin-right: 10px;
     }
+
     .addTask_selectTaskCategory {
         font-size: 18px;
     }
+
     .addTask_categoryList {
-        width: 217.6% !important;
+        width: 214.8% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 217.6% !important;
+        width: 214.8% !important;
         background-color: white;
     }
 }
@@ -2060,14 +2249,17 @@ input[type="checkbox" i] {
         overflow: scroll;
         height: 690px;
     }
+
     .addTask_categoryList {
         width: 215.5% !important;
         background-color: white;
     }
+
     .assignedToList {
         width: 215.5% !important;
         background-color: white;
     }
+
     .btnCreate {
         position: fixed;
         right: 22px;
@@ -2076,25 +2268,31 @@ input[type="checkbox" i] {
         height: 45px;
         font-size: 15px;
     }
+
     .assignedDiv {
         width: 80vw;
     }
+
     .addTask_categoryDiv {
         width: 80vw;
     }
+
     .leftContainer textarea {
         width: 84.5vw;
         font-size: 19px;
     }
+
     .titlesInputfild {
         width: 82vw;
         font-size: 19px;
     }
+
     .prioContainer {
         padding: 10px;
         margin-right: 3px;
         width: 36vw;
     }
+
     .selectionMessage {
         padding-left: 20px;
         padding-right: 20px;
@@ -2113,14 +2311,17 @@ input[type="checkbox" i] {
         overflow: scroll;
         height: 682px;
     }
+
     .addTask_categoryList {
         width: 215.8% !important;
         background-color: white;
     }
+
     .assignedToList {
         width: 215.8% !important;
         background-color: white;
     }
+
     .btnCreate {
         position: fixed;
         right: 22px;
@@ -2129,25 +2330,31 @@ input[type="checkbox" i] {
         height: 45px;
         font-size: 15px;
     }
+
     .assignedDiv {
         width: 80vw;
     }
+
     .addTask_categoryDiv {
         width: 80vw;
     }
+
     .leftContainer textarea {
         width: 84.5vw;
         font-size: 19px;
     }
+
     .titlesInputfild {
         width: 82vw;
         font-size: 19px;
     }
+
     .prioContainer {
         padding: 10px;
         margin-right: 3px;
         width: 36vw;
     }
+
     .selectionMessage {
         padding-left: 20px;
         padding-right: 20px;
@@ -2166,33 +2373,41 @@ input[type="checkbox" i] {
         font-size: 16px;
         margin-right: 2px;
     }
+
     .addTask_selectTaskCategory {
         font-size: 16px;
     }
+
     .addTask_categoryList {
         width: 216.5% !important;
         background-color: white;
         font-size: 16px;
     }
+
     .assignedToList {
         width: 216.5% !important;
         background-color: white;
         font-size: 19px;
     }
+
     .mainContents {
         overflow: scroll;
         height: 507px;
     }
+
     .assignedDiv {
         width: 80vw;
     }
+
     .addTask_categoryDiv {
         width: 80vw;
     }
+
     .titlesInputfild {
         width: 82vw;
         font-size: 16px;
     }
+
     .btnCreate {
         position: fixed;
         right: 22px;
@@ -2201,35 +2416,43 @@ input[type="checkbox" i] {
         height: 45px;
         font-size: 15px;
     }
+
     .assignedToArea {
         height: 27px;
         font-size: 16px;
     }
+
     .taskAssignedTo {
         font-size: 16px;
         margin: 10px 19px;
     }
+
     .rightContainer input {
         font-size: 16px;
     }
+
     .leftContainer textarea {
         width: 84.5vw;
         font-size: 16px;
     }
+
     .addTask_titleInputFields {
         margin-top: 20px;
         margin-bottom: 5px;
         font-size: 16px;
     }
+
     .headline h1 {
         padding-right: 30px;
         font-size: 47px;
         margin-bottom: 0;
         margin-top: 20px;
     }
+
     .mobileText {
         font-size: 16px;
     }
+
     .selectionMessage {
         padding-left: 20px;
         padding-right: 20px;
@@ -2248,33 +2471,41 @@ input[type="checkbox" i] {
         font-size: 16px;
         margin-right: 2px;
     }
+
     .addTask_selectTaskCategory {
         font-size: 16px;
     }
+
     .addTask_categoryList {
-        width: 215.7% !important;
+        width: 216% !important;
         background-color: white;
         font-size: 16px;
     }
+
     .assignedToList {
         width: 215.7% !important;
         background-color: white;
         font-size: 19px;
     }
+
     .mainContents {
         overflow: scroll;
         height: 580px;
     }
+
     .assignedDiv {
         width: 79.3vw;
     }
+
     .addTask_categoryDiv {
         width: 79.3vw;
     }
+
     .titlesInputfild {
         width: 81vw;
         font-size: 16px;
     }
+
     .btnCreate {
         position: fixed;
         right: 22px;
@@ -2283,35 +2514,43 @@ input[type="checkbox" i] {
         height: 45px;
         font-size: 15px;
     }
+
     .assignedToArea {
         height: 27px;
         font-size: 16px;
     }
+
     .taskAssignedTo {
         font-size: 16px;
         margin: 10px 19px;
     }
+
     .rightContainer input {
         font-size: 16px;
     }
+
     .leftContainer textarea {
         width: 84.5vw;
         font-size: 16px;
     }
+
     .addTask_titleInputFields {
         margin-top: 20px;
         margin-bottom: 5px;
         font-size: 16px;
     }
+
     .headline h1 {
         padding-right: 30px;
         font-size: 47px;
         margin-bottom: 0;
         margin-top: 10px;
     }
+
     .mobileText {
         font-size: 16px;
     }
+
     .selectionMessage {
         padding: 30px;
         width: 229px;
@@ -2326,15 +2565,33 @@ input[type="checkbox" i] {
     }
 }
 
+@media (max-width: 330px) {
+    .prio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .prioContainer {
+        padding: 10px;
+        margin-bottom: 10px;
+        margin-right: 5%;
+        margin-left: 5%;
+        width: 90%;
+    }
+}
+
 @media (max-width: 280px) {
     .addTask_categoryList {
-        width: 212.6% !important;
+        width: 212.5% !important;
         background-color: white;
     }
+
     .assignedToList {
-        width: 212.8% !important;
+        width: 212.5% !important;
         background-color: white;
     }
+
     .btnCreate {
         position: fixed;
         right: 22px;
@@ -2343,29 +2600,25 @@ input[type="checkbox" i] {
         height: 45px;
         font-size: 15px;
     }
+
     .assignedDiv {
         width: 75.3vw;
     }
+
     .addTask_categoryDiv {
         width: 75vw;
     }
+
     .leftContainer textarea {
         width: 81.5vw;
         font-size: 19px;
     }
+
     .titlesInputfild {
         width: 77vw;
         font-size: 19px;
     }
-    .prioContainer {
-        padding: 10px;
-        margin-bottom: 10px;
-        margin-right: 0px;
-        width: 40vw;
-    }
-    .prio {
-        display: block;
-    }
+
     .selectionMessage {
         padding: 30px;
         width: 186px;
@@ -2378,11 +2631,30 @@ input[type="checkbox" i] {
         justify-content: center;
         align-items: center;
     }
+
     .mainContents {
         overflow: scroll;
         height: 494px;
     }
+
     .rightContainer input {
         width: 83vw;
+    }
+
+    .subtaskContainer {
+        margin-bottom: 50px !important;
+    }
+
+}
+
+@media (max-width: 250px) {
+    .addTask_categoryList {
+        width: 216% !important;
+        background-color: white;
+    }
+
+    .assignedToList {
+        width: 216% !important;
+        background-color: white;
     }
 }

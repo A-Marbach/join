@@ -1,4 +1,8 @@
-//login function
+/**
+ * login function
+ * 
+ * 
+ */
 async function login() {
     let email = document.getElementById('input1');
     let password = document.getElementById('input2');
@@ -13,22 +17,29 @@ async function login() {
         document.getElementById('wrongInput').classList.remove('d-none');
     }
 }
-
-
-//show the html site at guest login
+/**
+ * show the html site at guest login
+ * 
+ * 
+ */
 async function guestLogin() {
     window.location.href = 'summary.html';
 }
-
-
+/**
+ * 
+ * load files from the user
+ * 
+ */
 async function init() {
     await downloadFromServer();
     users = JSON.parse(backend.getItem('users')) || [];
     activeUser = backend.getItem('activeUser') || 0;
 }
-
-
-//toggle password visibility icon
+/**
+ * 
+ * toggle password visibility icon
+ * 
+ */
 function changeImg() {
     let passwordField = document.getElementById('input2');
     if (passwordField.value.length > 0) {
@@ -39,9 +50,11 @@ function changeImg() {
         document.getElementById('password-nonvisible').classList.add('d-none');
     }
 }
-
-
-//a function to toggle password visibility
+/**
+ * a function to toggle password visibility
+ * 
+ * 
+ */
 function setInputToText() {
     let passwordField = document.getElementById('input2');
     let showPassword = document.getElementById('password-nonvisible');

@@ -250,6 +250,7 @@ body {
     width: 65%;
     position: absolute;
     right: 0;
+    overflow: auto;
 }
 
 .rightArea {
@@ -808,6 +809,29 @@ body {
     margin-top: 34px;
 }
 
+@media screen and (max-width: 950px) and (orientation: landscape){
+    .new-contact-mobile{
+        position: fixed;
+    }
+
+    .contactRightContentImg{
+        display: none;
+    }
+
+    .leftContent{
+        top: -9%;
+        font-size: 16px;
+        height: 40%!important;
+    }
+
+    .inputFieldSection{
+        overflow: auto;
+        padding-top: 100px;
+        padding-bottom: 40px;
+    }
+
+}
+
 @media (max-width: 1500px) {
     .letter {
         margin-left: 0px;
@@ -915,6 +939,7 @@ body {
 
     .rightContent {
         background-color: white;
+        overflow: auto;
     }
 
     .rightSection {
@@ -1043,7 +1068,7 @@ body {
         padding: unset;
         box-shadow: none;
         width: 100%;
-        height: 70vh;
+        height: calc(100vh - 80px);
     }
 
     .contactList::-webkit-scrollbar {
@@ -1057,7 +1082,6 @@ body {
     .new-contact-mobile {
         padding: 4px 0px;
         width: 193px;
-        height: 4%;
         background: #2A3647;
         color: white;
         border-radius: 8px;
@@ -1069,7 +1093,7 @@ body {
         align-items: center;
         justify-content: space-evenly;
         position: absolute;
-        right: 2%;
+        right: 7%;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 
@@ -1126,6 +1150,7 @@ body {
         width: 100%;
         flex-direction: column;
         justify-content: center;
+      
     }
 
     .contactRightContentImg {
@@ -1764,6 +1789,7 @@ body {
 @media screen and (max-width: 380px) {
     .new-contact-mobile {
         height: 5%;
+        right: 8%;
     }
 
     .contactDiv {

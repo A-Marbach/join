@@ -6,6 +6,7 @@ body {
     height: 100vh;
     width: 100vw;
     background-color: #F5F5F5 !important;
+    overflow: auto;
 }
 
 .headerContent {
@@ -120,12 +121,19 @@ body {
 
 .mainContent {
     display: flex;
+    
 }
 
 .left-Container {
     width: 60%;
     margin-left: 10%;
     margin-top: 10px;
+    /* height: calc(100vh - 80px)!important; */
+
+}
+
+.main-Container{
+    display: flex;
 }
 
 .right-Container {
@@ -268,7 +276,7 @@ body {
     margin-top: 20px;
     background-color: white;
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px;
     border: 1px solid lightgray;
 }
 
@@ -448,6 +456,22 @@ h3 {
     margin-top: 22px;
     right: 60px !important;
     z-index: 3 !important;
+}
+@media screen and (max-width: 950px) and (orientation: landscape) {
+    .rightContent{
+        height: calc(100vh -240px);
+    }
+
+    .leftContent{
+        height: calc(100vh -240px);
+    }
+
+    .main-Container{
+        height: calc(100vh -240px)!important;
+    }
+    .finishContainer{
+        padding-bottom: 100px!important;
+    }
 }
 
 @media(max-width: 1500px) {
@@ -779,6 +803,13 @@ h3 {
     .deatlineUrgent {
         padding-right: 20px;
     }
+    
+}
+
+@media(max-width: 700px){
+    .left-Container{
+        margin-bottom: 80px!important;
+    }
 }
 
 @media(max-width: 690px) {
@@ -789,6 +820,8 @@ h3 {
     .deatlineUrgent {
         padding-right: 15px;
     }
+
+   
 }
 
 @media(max-height: 667px) {
@@ -933,7 +966,7 @@ h3 {
     }
 
     .finishContainer {
-        padding: 8px;
+        padding: 4px;
     }
 
     .boardContainer {
@@ -1172,6 +1205,22 @@ h3 {
 }
 
 @media(max-width: 360px) {
+    .boardContainer div{
+        font-size: 22px;
+    }
+    .main-Container{
+        overflow: auto;
+        height: calc(100vh -80px);
+    }
+    .left-Container{
+        overflow: auto;
+        height: calc(100vh -160px)!important;
+
+    }
+
+    .boardContainer {
+        width: 70px;
+    }
     .taskContainer {
         margin-top: 20px;
     }
