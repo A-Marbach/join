@@ -186,7 +186,7 @@ function editContactBox(i, color, str) {
  */
 function createTaskHTML(initialsContainer, subtaskInitialsContainer, element) {
     return /*html*/ `
-        <div onclick="openCheckTask(${element['id']})" draggable="true" ondragstart="drag(${element['id']})" ontouchstart="touchstart(${element['id']})" ontouchend="touchend(${element['id']})" class="containerBlock" id="containerBlock-${element['id']}">
+        <div  onclick="openCheckTask(${element['id']})" draggable="true" ondragstart="drag(${element['id']})" ontouchstart="touchstart(${element['id']})" ontouchend="touchend(${element['id']})" class="containerBlock" id="containerBlock-${element['id']}">
             <div class="addCategoryInTask ${element['category']['color']}">
                 <p>${element['category']['name']}</p>
             </div>
@@ -265,7 +265,6 @@ function openCheckTaskHTML(initialsName, fullinitialsName, dateFormatted, task, 
 
             <p id="openCheckTasksAssignedToTitleDelete" class="openCheckTasksAssignedToTitle">Subtasks:</p>
             <div id="openCheckTasksAssignedToTitle">
-
             </div>
 
             <button class="deleteTaskButton" onclick="toAskDeleteTask(${taskIndex})">

@@ -156,7 +156,6 @@ h2 {
 
 .mainContents {
     overflow: scroll;
-    height: 787px;
 }
 
 .mainContents::-webkit-scrollbar {

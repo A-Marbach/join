@@ -690,17 +690,14 @@
             padding-bottom: 350px;
         }
 
-        .checkTaskSmall {
-            height: 100vh;
+       
 
-        }
-
-        .openCheckTaskBigDiv {
+        /* .openCheckTaskBigDiv {
             margin: 0;
-            width: 90%;
+           
             padding-bottom: 400px;
 
-        }
+        } */
     }
 
     @media (max-width: 1600px) {
@@ -993,7 +990,6 @@
 
         .toEditTaskMainDiv {
             width: auto;
-            height: 750px;
             border-radius: 30px;
             position: relative;
         }
@@ -1123,7 +1119,6 @@
     @media(max-width: 1024px) {
         .toEditTaskMainDiv {
             width: auto;
-            height: 750px;
             border-radius: 30px;
             position: relative;
         }
@@ -1132,18 +1127,16 @@
             width: 436px;
         }
 
-        .openCheckTaskBigDiv {
-            margin: 19px;
-        }
+       
 
-        .checkTaskSmall {
+        /* .checkTaskSmall {
             position: relative;
             background-color: #FFFFFF;
             height: 689px;
             border-radius: 30px;
             overflow: scroll;
             animation: slideInFromRight 0.5s forwards;
-        }
+        } */
 
         .selectionMessage {
             left: 29%;
@@ -1176,14 +1169,11 @@
     }
 
     @media(max-width: 912px) {
-        .toEditTaskMainDiv {
-            height: 750px;
-        }
+       
 
         .checkTaskSmall {
             position: relative;
             background-color: #FFFFFF;
-            height: 692px;
             border-radius: 30px;
             overflow: scroll;
         }
@@ -1238,14 +1228,9 @@
     }
 
     @media(max-width: 820px) {
-        .toEditTaskMainDiv {
-            height: 750px;
-        }
+        
 
-        .checkTaskSmall {
-            height: 781px;
-            width: auto;
-        }
+       
 
         .closes2 {
             position: absolute;
@@ -1369,15 +1354,12 @@
             display: flex;
         }
 
-        .checkTaskSmall {
-            height: 692px;
-            width: auto;
-        }
+      
 
-        .deleteTaskButton {
+        /* .deleteTaskButton {
             margin-left: 73%;
             margin-top: 15px;
-        }
+        } */
     }
 
     @media(max-width: 768px) {
@@ -1387,24 +1369,14 @@
         }
 
         .checkTasking {
-            height: 936px;
             top: 80px;
         }
 
-        .checkTaskSmall {
-            height: 710px;
-        }
+        
 
-        .toEditTaskMainDiv {
-            height: 830px;
-        }
+        
 
-        .toEditTaskSaveButton {
-            top: 96%;
-            left: 80%;
-            position: revert;
-            margin-top: 20px;
-        }
+       
 
         .toEditopenCheckTaskBigDiv {
             margin-top: 30px;
@@ -1418,8 +1390,7 @@
         }
 
         .closes4 {
-            width: 40px;
-            height: 40px;
+           top: 17%;
         }
 
         .assignedToListToEdit {
@@ -1453,14 +1424,12 @@
             cursor: pointer;
         }
 
-        .deleteTaskButton {
+        /* .deleteTaskButton {
             margin-left: 72%;
             margin-top: 15px;
-        }
+        } */
 
-        .toEditTaskButton {
-            margin-left: 83%;
-        }
+       
 
         .categoryList {
             background-color: white;
@@ -1494,28 +1463,18 @@
             margin-right: 40px;
         }
 
-        .openCheckTaskBigDiv {
-            margin-top: 60px;
-            margin-right: 140px;
-            margin-left: 30px;
-            /* overflow: auto; */
-            margin-bottom: 200px;
-        }
+       
 
-        .closes4 {
-            top: 133px;
-            left: 74%;
-            display: flex;
-        }
+      
 
-        .deleteTaskButton {
+        /* .deleteTaskButton {
             margin-left: 74%;
             margin-top: 15px;
-        }
+        } */
 
-        .toEditTaskButton {
+        /* .toEditTaskButton {
             margin-left: 89%;
-        }
+        } */
 
         .assignedToList {
             width: 98.8%;
@@ -1551,26 +1510,16 @@
             margin-right: 35px;
         }
 
-        .openCheckTaskBigDiv {
-            margin-top: 60px;
-            margin-right: 230px;
-            margin-left: 30px;
-        }
+       
 
-        .closes4 {
-            top: 138px;
-            left: 61%;
-            display: flex;
-        }
+        
 
-        .deleteTaskButton {
+        /* .deleteTaskButton {
             margin-left: 70%;
             margin-top: 15px;
-        }
+        } */
 
-        .toEditTaskButton {
-            margin-left: 94%;
-        }
+       
 
         .categoryList {
             width: 99.6%;
@@ -1581,12 +1530,7 @@
         }
     }
 
-    @media(max-height: 600px) {
-        .checkTaskSmall {
-            height: 558px !important;
-            width: 600px !important;
-        }
-    }
+  
 
     @media(max-width: 600px) {
         .prioContainer {
@@ -1652,152 +1596,14 @@
         .assignedToList {
             width: 100.3%;
         }
-    }
 
-    @media(max-width: 540px) {
-        .mainContainer {
-            height: 718px;
-            width: auto;
-            top: 81px;
-        }
-
-        .mainContainerTaskForm {
-            width: 836px;
-            height: 82.7vh;
-        }
-
-        .openCheckTasksCategoryTesx {
-            font-size: 21px;
-            color: white;
-        }
-
-        .openCheckTasksTitleTest {
-            font-size: 36px;
-        }
-
-        .openCheckTaskBigDiv {
-            margin-top: 31px;
-            margin-right: 60px;
-            margin-left: 30px;
-        }
-
-        .openCheckTasksDescription {
-            font-size: 16px;
-        }
-
-        .openCheckTasksDateText {
-            font-size: 16px;
-        }
-
-        .openCheckTasksDateFormat {
-            font-size: 16px;
-        }
-
-        .openCheckTasksPrioText {
-            font-size: 16px;
-        }
-
-        .openCheckTasksPrioTextText {
-            font-size: 16px;
-            margin-right: 10px;
-        }
-
-        .openCheckTasksPrioTextDiv {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 108px;
-            height: 29px;
-            border-radius: 10px;
-        }
-
-        .openCheckTasksPrioTextImage {
-            height: 15px;
-            width: 21px;
-        }
-
-        .openCheckTasksCategory {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 115px;
-            height: 36px;
-            border-radius: 8px;
-        }
-
-        .openCheckTasksAssignedToTitle {
-            font-size: 16px;
-        }
-
-        .openCheckDivAssignTask {
-            width: 27px;
-            height: 27px;
-        }
-
-        .openCheckAssignTaskFullName {
-            font-size: 17px;
-        }
-
-        .closes4 {
-            top: 82px;
-            left: 87%;
-        }
-
-        .deleteTaskButton {
-            width: 48px;
-            height: 48px;
-            margin-left: 345px;
-        }
-
-        .toEditTaskButton {
-            width: 48px;
-            height: 48px;
-            margin-top: -48px;
-            margin-left: 420px;
-        }
-
-        .toEditTaskMainDiv {
-            background-color: #F5F5F5 !important;
-            width: auto;
-            height: 543px;
-            border-radius: 0px;
-            position: relative;
-            overflow: scroll;
-        }
-
-        .toEditTaskSaveButton {
-            top: 116%;
-            left: 80%;
-        }
-
-        .assignedToListToEdit {
-            width: 92.2%;
-        }
-
-        .askDeleteTask {
-            width: 400px;
-            height: 200px;
-        }
-
-        .deleteTaskTesx {
-            font-size: 16px;
-        }
-
-        .deleteTaskAnswer {
-            width: 50px;
-            height: 50px;
-            font-size: 16px;
-        }
-
-        .checkTaskSmall {
-            height: 698px;
-        }
-
-        .selectionMessage {
-            left: 14%;
-            top: 60%;
+        .closes4{
+            top: 13%;
+            right: 16px;
         }
     }
+
+   
 
     @media(max-width: 520px) {
         .categoryList {
@@ -1806,46 +1612,8 @@
         }
     }
 
-    @media(max-width: 512px) {
-        .deleteTaskButton {
-            margin-left: 72%;
-        }
-
-        .toEditTaskButton {
-            margin-left: 90%;
-        }
-    }
-
-    @media(max-width: 500px) {
-        .openCheckTaskBigDiv {
-            margin-top: 60px;
-            margin-right: 180px;
-            margin-left: 30px;
-        }
-
-        .prioContainer {
-            margin-right: 20px;
-        }
-
-        .closes4 {
-            top: 114px;
-            left: 73%;
-            display: flex;
-        }
-
-        .deleteTaskButton {
-            margin-left: 92%;
-        }
-
-        .toEditTaskButton {
-            margin-left: 120%;
-        }
-
-        .categoryList {
-            background-color: white;
-            width: 101.2%;
-        }
-    }
+    
+    
 
     @media(max-width: 470px) {
         .prioContainer {
@@ -1858,107 +1626,6 @@
         }
     }
 
-    @media(max-width: 440px) {
-        .prioContainer {
-            margin-right: 10px;
-        }
-
-        .leftContainerTextarea {
-            width: 98%;
-        }
-
-        .leftContainerI {
-            width: 98%;
-        }
-
-        .mainContainerTaskForm {
-            margin-left: -20px;
-        }
-
-        .openCheckTasksCategoryTesx {
-            font-size: 21px;
-        }
-
-        .openCheckTasksCategory {
-            width: 127px;
-            height: 33px;
-        }
-
-        .openCheckTasksTitleTest {
-            font-size: 36px;
-        }
-
-        .openCheckTasksDescription {
-            font-size: 16px;
-        }
-
-        .openCheckTasksDateText {
-            font-size: 16px;
-        }
-
-        .openCheckTasksDateFormat {
-            font-size: 16px;
-        }
-
-        .openCheckTasksPrioText {
-            font-size: 16px;
-        }
-
-        .openCheckTasksPrioTextText {
-            font-size: 16px;
-        }
-
-        .openCheckTasksPrioTextDiv {
-            width: 115px;
-            height: 27px;
-        }
-
-        .openCheckTasksPrioTextImage {
-            width: 19px;
-            height: 12px;
-        }
-
-        .openCheckTasksAssignedToTitle {
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-
-        .openCheckDivAssignTask {
-            width: 25px;
-            height: 25px;
-        }
-
-        .openCheckAssignTaskFullName {
-            font-size: 16px;
-        }
-
-        .openSubtasksComent {
-            font-size: 16px;
-            margin-bottom: 3px;
-        }
-
-        .openCheckboxSubtasks {
-            width: 15px;
-            height: 15px;
-        }
-
-        .deleteTaskButton {
-            width: 40px;
-            height: 40px;
-            margin-top: 4px;
-        }
-
-        .toEditTaskButton {
-            width: 40px;
-            height: 40px;
-            margin-top: -40px;
-        }
-
-        .deleteTaskImage {
-            width: 25px;
-            height: 25px;
-        }
-    }
 
     @media(max-width: 414px) {
         .mainContainer {
@@ -1971,10 +1638,7 @@
             height: 82.8vh;
         }
 
-        .toEditTaskSaveButton {
-            position: static;
-            margin-top: 20px;
-        }
+        
 
         .assignedToListToEdit {
             width: 95%;
@@ -2013,10 +1677,7 @@
             margin-top: 30px;
         }
 
-        .closes4 {
-            top: 79px;
-            left: 82%;
-        }
+       
 
         .deleteTaskButton {
             margin-left: 235px;
@@ -2042,16 +1703,13 @@
         .toEditTaskMainDiv {
             background-color: #F5F5F5 !important;
             width: auto;
-            height: 715px;
+          
             border-radius: 0px;
             position: relative;
             overflow: scroll;
         }
 
-        .checkTaskSmall {
-            height: 709px;
-        }
-
+      
         .taskCategory {
             font-size: 16px;
             margin: 10px 19px;
@@ -2113,18 +1771,14 @@
             height: 83.8vh;
         }
 
-        .checkTasking {
-            height: 825px;
-        }
+       
 
-        .toEditTaskMainDiv {
-            height: 762px;
-        }
+     
 
         .deleteTaskButton {
             width: 48px;
             height: 48px;
-            margin-top: 17px;
+            margin-top: -15px;
             margin-left: 235px;
         }
 
@@ -2135,24 +1789,19 @@
             margin-left: 300px;
         }
 
-        .closes4 {
-            left: 81%;
-            top: 79px;
-            width: 40px;
-            height: 40px;
-        }
+      
 
-        .checkTaskSmall {
-            height: 743px;
-        }
+      
     }
 
     @media(max-width: 400px) {
         .prio{
             display: flex;
             flex-direction: column;
-           
-          
+        }
+
+        .toEditTaskSaveButton{
+           bottom: -24px;
         }
 
         .prioContainer{
@@ -2195,21 +1844,11 @@
         .deleteTaskButton {
             width: 48px;
             height: 48px;
-            margin-top: 17px;
+          
             margin-left: 217px;
         }
 
-        .toEditTaskMainDiv {
-            height: 664px;
-        }
-
-        .checkTaskSmall {
-            height: 676px;
-        }
-
-        .closes4 {
-            left: 80%;
-        }
+       
 
         .taskCategory {
             font-size: 16px;
@@ -2266,17 +1905,12 @@
         .deleteTaskButton {
             width: 48px;
             height: 48px;
-            margin-top: 17px;
+          
             margin-left: 217px;
         }
 
-        .toEditTaskMainDiv {
-            height: 664px;
-        }
-
-        .closes4 {
-            left: 81%;
-        }
+       
+      
 
         .assignedToList {
             background-color: white;
@@ -2327,9 +1961,7 @@
     }
 
     @media (max-width: 375px) and (max-height: 667px) {
-        .checkTaskSmall {
-            height: 500px;
-        }
+      
 
         .mainContainer {
             height: 717px;
@@ -2350,10 +1982,7 @@
             margin-left: 37px;
         }
 
-        .closes4 {
-            top: 75px;
-            left: 84%;
-        }
+      
 
         .toEditopenCheckTaskBigDiv {
             margin-top: 0px;
@@ -2373,15 +2002,11 @@
             width: 100%;
         }
 
-        .toEditTaskSaveButton {
-            position: static;
-            margin-top: 20px;
-        }
-
+       
         .toEditTaskMainDiv {
             background-color: #F5F5F5 !important;
             width: auto;
-            height: 830px;
+           
             border-radius: 0px;
             position: relative;
             overflow: scroll;
@@ -2523,15 +2148,8 @@
 
         }
 
-        .checkTaskSmall {
-            height: 77vh;
-        }
-
-        .closes4 {
-            top: 80px;
-            left: 80%;
-        }
-
+       
+     
         .deleteTaskButton {
             margin-left: 143px;
         }
@@ -2542,6 +2160,11 @@
 
         .assignedToListToEdit {
             width: 101%;
+        }
+
+        .closes4{
+            top: 18%;
+            left: 82%;
         }
 
         .categoryList {
@@ -2565,10 +2188,7 @@
             margin-left: 170px;
         }
 
-        .closes4 {
-            top: 18px;
-            left: 74%;
-        }
+     
     }
 
     @media(max-width: 280px) {
@@ -2655,14 +2275,8 @@
             margin-top: -40px;
         }
 
-        .checkTaskSmall {
-            height: 89vh;
-        }
-
-        .checkTaskSmall {
-            height: 802px;
-        }
-
+      
+       
         .closes4 {
             left: 82%;
             top: 78px;
@@ -2670,10 +2284,7 @@
             height: 30px;
         }
 
-        .toEditTaskSaveButton {
-            width: 66px;
-            height: 48px;
-        }
+       
 
         .divAssignTask {
             width: 28px;
@@ -2701,7 +2312,7 @@
         .toEditTaskMainDiv {
             background-color: #F5F5F5 !important;
             width: auto;
-            height: 924px;
+         
             border-radius: 0px;
             position: relative;
             overflow: scroll;

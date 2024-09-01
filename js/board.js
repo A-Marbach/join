@@ -214,28 +214,33 @@ async function closeContainer1() {
     // await backend.setItem('allTasks', JSON.stringify(allTasks));
     await backend.setItem('users', JSON.stringify(users));
 }
-document.addEventListener('DOMContentLoaded', function() {
-    const closeContainer2 = document.getElementById('closeContainer2');
-    const checkTaskSmall = document.getElementById('checkTaskSmall');
-    const toEditTaskMainDiv = document.getElementById('toEditTaskMainDiv');
 
-    if (checkTaskSmall) {
-        // Füge einen Event-Listener hinzu, um die Ereignisweiterleitung zu stoppen
-        checkTaskSmall.addEventListener('click', function(event) {
-            event.stopPropagation();
-        });
-        toEditTaskMainDiv.addEventListener('click', function(event) {
-            event.stopPropagation();
-        });
-    }
-    if (closeContainer2) {
-        closeContainer2.addEventListener('click', function() {
-            closeContainer2.classList.add('d-none');
-        });
-    } else {
-        console.error('Element mit ID "closeContainer2" wurde nicht gefunden.');
-    }
-});
+
+if (window.matchMedia("(min-width: 970px)").matches){
+    document.addEventListener('DOMContentLoaded', function() {
+        const closeContainer2 = document.getElementById('closeContainer2');
+        const checkTaskSmall = document.getElementById('checkTaskSmall');
+        const toEditTaskMainDiv = document.getElementById('toEditTaskMainDiv');
+    
+        if (checkTaskSmall) {
+            // Füge einen Event-Listener hinzu, um die Ereignisweiterleitung zu stoppen
+            checkTaskSmall.addEventListener('click', function(event) {
+                event.stopPropagation();
+            });
+            toEditTaskMainDiv.addEventListener('click', function(event) {
+                event.stopPropagation();
+            });
+        }
+        if ( closeContainer2)  {
+            closeContainer2.addEventListener('click', function() {
+                closeContainer2.classList.add('d-none');
+            });
+        } else {
+            console.error('Element mit ID "closeContainer2" wurde nicht gefunden.');
+        }
+    });
+}
+
 
 /**
  * close the task container after to edit the task

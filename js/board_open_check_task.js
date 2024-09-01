@@ -96,14 +96,32 @@ function dateOpenCheckTask(taskIndex) {
 function openCheckTaskNames(taskIndex) {
     let names = users[activeUser]['tasks'][taskIndex];
     let nameParts = names.assignedTo;
+
+    // Sicherstellen, dass nameParts definiert ist und ein Array ist
+    if (!nameParts || !Array.isArray(nameParts)) {
+        console.error('assignedTo is not defined or not an array:', nameParts);
+        return ''; // Oder alternativ einen Fehler werfen
+    }
+
     let initialsContainer = '';
     for (let j = 0; j < nameParts.length; j++) {
-        let name = nameParts[j]['name'].split(' ');
-        let color = nameParts[j]['color'];
-        let initials = name[0][0].toUpperCase();
-        if (name.length > 1) {
-            initials += name[1][0].toUpperCase();
+        let person = nameParts[j];
+        
+        // Überprüfen, ob person definiert ist und die Eigenschaften 'name' und 'color' hat
+        if (!person || !person.name || !person.color) {
+            console.error('Person object is missing required properties:', person);
+            continue; // Zum nächsten Element fortfahren
         }
+
+        let name = person.name.split(' ');
+        let color = person.color;
+
+        // Initialen bilden
+        let initials = name[0][0].toUpperCase(); // Erster Buchstabe des Vornamens
+        if (name.length > 1 && name[1][0]) { // Prüfen, ob ein Nachname existiert
+            initials += name[1][0].toUpperCase(); // Erster Buchstabe des Nachnamens
+        }
+
         initialsContainer += openCheckTaskNamesHTML(color, initials);
     }
     return initialsContainer;

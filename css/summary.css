@@ -469,9 +469,7 @@ h3 {
     .main-Container{
         height: calc(100vh -240px)!important;
     }
-    .finishContainer{
-        padding-bottom: 100px!important;
-    }
+    
 }
 
 @media(max-width: 1500px) {
@@ -703,10 +701,12 @@ h3 {
         justify-content: space-between;
     }
 
+    
     .left-Container {
         margin-left: 0;
         width: 100%;
         margin-top: 0;
+        height: 85vh;
     }
 
     .deadlineContainer {
@@ -838,6 +838,10 @@ h3 {
 
     .deatlineUrgent {
         padding-right: 10px;
+    }
+
+    .left-Container{
+        height: calc(85vh - 80px);
     }
 
     /* .date {
