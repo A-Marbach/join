@@ -29,6 +29,8 @@ async function downloadFromServer() {
     console.log('Loaded', result);
 }
 
+
+
 function setURL(url) {
     BASE_SERVER_URL = url;
 }
