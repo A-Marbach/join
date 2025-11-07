@@ -1,6 +1,6 @@
 // __tests__/mini_backend.test.js
-const backend = require('../mini_backend');
 
-test('Beispiel: 2 + 2 = 4', () => {
-  expect(2 + 2).toBe(4);
+test('simple test to check environment', () => {
+  window.value = 42;   // window existiert jetzt, jsdom simuliert es
+  expect(window.value).toBe(42);
 });
