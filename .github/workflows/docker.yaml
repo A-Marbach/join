@@ -18,6 +18,7 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: .
 
       - name: Build Docker image
         run: docker build -t join .
@@ -31,5 +32,5 @@ jobs:
       - name: Deploy to VM via SSH
         run: |
           ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
-          "docker stop join || true && docker rm join || true && docker run -d -p 3000:3000 --name join join"
+          "docker stop join || true && docker rm join || true && docker run -d -p 3000:3000 --name join"
 
