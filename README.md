@@ -77,3 +77,5 @@ How it works
 * Installs dependecies
 * Builds the DOcker image
 * SSH into your VM and restarts the container
+
+trigger
