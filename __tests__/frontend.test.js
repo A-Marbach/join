@@ -1,27 +1,31 @@
-/**
- * __tests__/frontend.test.js
- */
-const { addTask } = require('../js/board');
+const { createTaskAssignedTo, createTaskProgressbar } = require('../js/board');
 
-describe('Frontend DOM tests', () => {
-    beforeEach(() => {
-        document.body.innerHTML = '<ul id="tasks"></ul><button id="addBtn">Add</button>';
-    });
+describe('Frontend logic functions (mock DOM)', () => {
+  beforeAll(() => {
+    // Minimaler DOM-Mock, nur damit innerHTML existiert
+    global.document = {
+      createElement: (tag) => ({ tagName: tag.toUpperCase(), innerHTML: '' }),
+    };
+  });
 
-    test('addTask adds a new li to the ul', () => {
-        addTask('My Task');
-        const ul = document.getElementById('tasks');
-        expect(ul.children.length).toBe(1);
-        expect(ul.children[0].textContent).toBe('My Task');
-    });
+  test('createTaskAssignedTo returns HTML string', () => {
+    const element = {
+      assignedTo: [
+        { name: 'Max Mustermann', color: 'red' },
+        { name: 'Anna Schmidt', color: 'blue' },
+      ],
+    };
+    const result = createTaskAssignedTo(element);
+    expect(result).toContain('Max');
+    expect(result).toContain('Anna');
+  });
 
-    test('button click adds task', () => {
-        const btn = document.getElementById('addBtn');
-        btn.addEventListener('click', () => addTask('Clicked Task'));
-
-        btn.click();
-
-        const ul = document.getElementById('tasks');
-        expect(ul.children[0].textContent).toBe('Clicked Task');
-    });
+  test('createTaskProgressbar returns HTML string with correct percentage', () => {
+    const element = {
+      subtask: ['a', 'b', 'c'],
+      subtaskChecked: ['a', 'b'],
+    };
+    const result = createTaskProgressbar(element, 0);
+    expect(result).toContain('66'); // 2/3 = 66%
+  });
 });
