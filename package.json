@@ -4,12 +4,7 @@
   "description": "A task manager inspired by the Kanban method. You can create and organize tasks using drag and drop, assign tasks to users and define subtasks.",
   "main": "mini_backend.js",
   "scripts": {
-    "start": "node server.js",
-    "test": "vitest run"
-  },
-  "devDependencies": {
-    "vitest": "^0.43.1",
-    "jsdom": "^22.1.0"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
