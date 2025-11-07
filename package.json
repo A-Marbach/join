@@ -1,0 +1,24 @@
+{
+  "name": "join",
+  "version": "1.0.0",
+  "description": "A task manager inspired by the Kanban method. You can create and organize tasks using drag and drop, assign tasks to users and define subtasks.",
+  "main": "mini_backend.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A-Marbach/join.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/A-Marbach/join/issues"
+  },
+  "homepage": "https://github.com/A-Marbach/join#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
