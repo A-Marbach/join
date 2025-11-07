@@ -52,3 +52,5 @@ async function filterAllTasks() {
     feedback = users[activeUser]['tasks'].filter(t => t['list'] == 'feedback');
     done = users[activeUser]['tasks'].filter(t => t['list'] == 'done');
 }
+
+module.exports = { filterAllTasks, getAllTasks, init, navBarHighlight, todo, progress, feedback, done, users, activeUser };

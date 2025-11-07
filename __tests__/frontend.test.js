@@ -1,31 +1,42 @@
-const { createTaskAssignedTo, createTaskProgressbar } = require('../js/board');
+// __tests__/script.test.js
 
-describe('Frontend logic functions (mock DOM)', () => {
-  beforeAll(() => {
-    // Minimaler DOM-Mock, nur damit innerHTML existiert
-    global.document = {
-      createElement: (tag) => ({ tagName: tag.toUpperCase(), innerHTML: '' }),
-    };
-  });
+// Mock backend bevor das script geladen wird
+global.backend = {
+    getItem: jest.fn(),
+    setItem: jest.fn()
+};
 
-  test('createTaskAssignedTo returns HTML string', () => {
-    const element = {
-      assignedTo: [
-        { name: 'Max Mustermann', color: 'red' },
-        { name: 'Anna Schmidt', color: 'blue' },
-      ],
-    };
-    const result = createTaskAssignedTo(element);
-    expect(result).toContain('Max');
-    expect(result).toContain('Anna');
-  });
+// Mock downloadFromServer, sonst Fehler bei init/getAllTasks
+global.downloadFromServer = jest.fn().mockResolvedValue();
 
-  test('createTaskProgressbar returns HTML string with correct percentage', () => {
-    const element = {
-      subtask: ['a', 'b', 'c'],
-      subtaskChecked: ['a', 'b'],
-    };
-    const result = createTaskProgressbar(element, 0);
-    expect(result).toContain('66'); // 2/3 = 66%
-  });
+const script = require('../js/script');
+
+describe('filterAllTasks', () => {
+    beforeEach(() => {
+        // setze die Variablen im script-Modul selbst
+        script.users = [
+            { tasks: [
+                { id: 1, list: 'todo' },
+                { id: 2, list: 'progress' },
+                { id: 3, list: 'feedback' },
+                { id: 4, list: 'done' },
+                { id: 5, list: 'todo' },
+            ]}
+        ];
+        script.activeUser = 0;
+
+        // leere Arrays für jede Kategorie
+        script.todo = [];
+        script.progress = [];
+        script.feedback = [];
+        script.done = [];
+    });
+
+    test('correctly separates tasks into categories', async () => {
+        await script.filterAllTasks();
+        expect(script.todo.length).toBe(2);
+        expect(script.progress.length).toBe(1);
+        expect(script.feedback.length).toBe(1);
+        expect(script.done.length).toBe(1);
+    });
 });
