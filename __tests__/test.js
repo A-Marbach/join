@@ -1,5 +1,6 @@
-const sum = (a, b) => a + b;
+// __tests__/mini_backend.test.js
+const backend = require('../mini_backend');
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3);
+test('Beispiel: 2 + 2 = 4', () => {
+  expect(2 + 2).toBe(4);
 });
