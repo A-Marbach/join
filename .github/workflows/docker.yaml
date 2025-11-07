@@ -32,5 +32,5 @@ jobs:
       - name: Deploy to VM via SSH
         run: |
           ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
-          "docker stop join || true && docker rm join || true && docker run -d -p 3000:3000 --name join"
+          "docker stop join || true && docker rm join || true && docker run -d -p 3000:3000 --name join join"
 
