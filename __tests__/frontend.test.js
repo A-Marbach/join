@@ -1,19 +1,19 @@
 // __tests__/script.test.js
 
-// Mock backend bevor das script geladen wird
+// Mock backend bevor das Script geladen wird
 global.backend = {
     getItem: jest.fn(),
     setItem: jest.fn()
 };
 
-// Mock downloadFromServer, sonst Fehler bei init/getAllTasks
+// Mock downloadFromServer, sonst gibt es Fehler bei init/getAllTasks
 global.downloadFromServer = jest.fn().mockResolvedValue();
 
-const script = require('../js/script');
+const script = require('../js/script'); // importiere dein Script-Modul
 
 describe('filterAllTasks', () => {
     beforeEach(() => {
-        // setze die Variablen im script-Modul selbst
+        // Setze die Variablen direkt im Script-Modul
         script.users = [
             { tasks: [
                 { id: 1, list: 'todo' },
@@ -23,9 +23,10 @@ describe('filterAllTasks', () => {
                 { id: 5, list: 'todo' },
             ]}
         ];
+
         script.activeUser = 0;
 
-        // leere Arrays für jede Kategorie
+        // Leere Arrays für die Kategorien
         script.todo = [];
         script.progress = [];
         script.feedback = [];
@@ -33,7 +34,10 @@ describe('filterAllTasks', () => {
     });
 
     test('correctly separates tasks into categories', async () => {
+        // Filtere die Aufgaben
         await script.filterAllTasks();
+
+        // Prüfe die Länge der Kategorien
         expect(script.todo.length).toBe(2);
         expect(script.progress.length).toBe(1);
         expect(script.feedback.length).toBe(1);

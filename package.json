@@ -5,13 +5,11 @@
   "main": "mini_backend.js",
   "scripts": {
     "start": "node server.js",
-    "test": "jest"
-  },
-    "jest": {
-     "testEnvironment": "jest-environment-jsdom"
+    "test": "vitest run"
   },
   "devDependencies": {
-    "jest": "^30.2.0"
+    "vitest": "^0.43.1",
+    "jsdom": "^22.1.0"
   },
   "repository": {
     "type": "git",
