@@ -1,7 +1,21 @@
-# Join_WN
+# Join_WN – Kanban Task Manager
 
-A task manager inspired by the Kanban method. You can create and organize tasks using drag and drop, assign tasks to users and define subtasks.
+This project is a Kanban-style task management application built with JavaScript.  
+It focuses on drag-and-drop interaction, task organization, and a clean user experience.
 
+The application demonstrates frontend logic, DOM manipulation, and lightweight backend integration for persistent data storage.
+
+---
+
+## Table of Contents
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Running Locally](#running-locally)
+- [Docker Deployment](#docker-deployment)
+- [Project Purpose](#project-purpose)
+- [Extras](#extras)
+
+---
 
 ![image](https://user-images.githubusercontent.com/113894308/231970925-2c054d65-0989-4e01-9436-3d02ed0919e7.png)
 ![image](https://user-images.githubusercontent.com/113894308/231971068-45141932-231d-49e8-9283-8f96b0e6486e.png)
@@ -11,18 +25,26 @@ A task manager inspired by the Kanban method. You can create and organize tasks 
 ## Features
 
 - Create, edit, and delete tasks
-- Drag & drop task organization (Kanban style)
+- Drag & drop Kanban board (To Do / In Progress / Done)
 - Assign tasks to users
-- Define subtasks
-- Persistent storage with mini-backend.js
+- Create and manage subtasks
+- Persistent storage via lightweight backend (`server.js`)
 
 ---
 
 ## Tech Stack
 
-- Frontend: HTML, CSS, JavaScript
-- Backend: Node.js + Express
-- Dockerized for easy deployment
+**Frontend:**
+- HTML
+- CSS
+- JavaScript
+
+**Backend:**
+- Node.Js
+- Express
+
+**Optional:**
+- Docker
 
 ---
 
@@ -44,6 +66,8 @@ node server.js
 
 ## Docker Deployment
 
+# Docker ensures consistent deployment across environments
+
 Build and run the Docker container:
 ```bash
 docker build -t join .
@@ -54,28 +78,24 @@ docker run -d -p 3000:3000 join
 * Your server runs isolated in a container, making it portable and reproducible
 
 
-## CI/CD with GitHub Actions
-This project includes a GitHub Actions workflow that automatically builds and deploys the Docker container to your VM whenever code is pushed to the main branch.
+## Project Purpose
 
-Workflow Highlights
+This project was built to demonstrate:
 
-* Node.js setup and dependency installation
-* Docker image build
-* SSH deployment to VM
+- Focus on scalable frontend architecture, state handling, and interactive UI patterns using JavaScript 
+- DOM manipulation and UI logic  
+- Drag & drop interactions (Kanban system)  
+- Basic backend integration with Node.js  
+- Application deployment using Docker (optional)  
 
-How it works
-1. Add the following secrets in your GitHub repository settings:
+---
 
-* SSH_KEY → your private SSH key for the VM
-* SSH_USER → username to access the VM
-* SSH_HOST → IP address or hostname of the VM
-* SSH_PORT → SSH port of the VM (default is 22)
+## Extras
 
-2. On push to main, GitHub Actions:
+- The project can be extended with authentication  
+- Additional backend persistence improvements are possible  
+- UI can be enhanced with frameworks (e.g. Angular or React)  
 
-* Checks out the repository
-* Installs dependecies
-* Builds the DOcker image
-* SSH into your VM and restarts the container
+---
 
-trigger
+> Note: Environment variables or sensitive data should never be committed to the repository.
