@@ -1,4 +1,4 @@
-# Join_WN – Kanban Task Manager
+# Join – Kanban Task Manager
 
 This project is a Kanban-style task management application built with JavaScript.  
 It focuses on drag-and-drop interaction, task organization, and a clean user experience.
